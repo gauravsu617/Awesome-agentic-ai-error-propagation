@@ -66,11 +66,12 @@ The evaluator should validate required columns, missing values, allowed ranges, 
 \section{Results}
 Table~\ref{tab:results} summarizes the recalculated multi-seed records. Each condition has $n=3000$ observations at each base rate. Paired differences are calculated by matching rows on seed, trial, and base error rate. The displayed confidence intervals are approximate 95\% normal intervals for the mean paired difference (mean difference $\pm 1.96$ standard errors); they are descriptive and should be confirmed with the final analysis script.
 
-\begin{table}[ht]
+\begin{table*}[t]
 \centering
 \caption{Recalculated stage-error counts and any-stage-error rates from the saved multi-seed CSV.}
 \label{tab:results}
 \small
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{rrrrrl}
 \toprule
 Base rate & $n$/condition & Independent & Propagation & Difference (95\% CI) & Any-error rate (both) \\
@@ -80,8 +81,9 @@ Base rate & $n$/condition & Independent & Propagation & Difference (95\% CI) & A
 0.2 & 3000 & 0.7887 & 0.9953 & 0.2067 [0.1886, 0.2247] & 0.5787 \\
 0.3 & 3000 & 1.1790 & 1.5100 & 0.3310 [0.3092, 0.3528] & 0.7447 \\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{tabular}%
+}
+\end{table*}
 
 The paired records show nonnegative differences for all matched trials; this is consistent with the shared-random-number construction and the propagation rule, and must be interpreted as a property of this simulation design. The binary any-error rate is identical across conditions because the outcome is defined as $F=\mathbb{1}(E>0)$: after a workflow has its first error, additional errors increase the count $E$ but cannot change $F$ from 1 to a larger value.
 
@@ -99,7 +101,7 @@ First, this is a simulated process; its conclusions depend on the chosen error-g
 This paper specifies a controlled simulation for examining whether conditional downstream error propagation increases the number of errors accumulated in a multi-stage research workflow. The key methodological point is that accumulated error count and the probability of any workflow error are distinct outcomes. The numerical observations remain provisional until recomputed from raw trial-level data. The study should be presented as a mechanism-isolation simulation, with real-agent validation and verified literature synthesis left as necessary future work.
 
 \section*{Data and Code Availability}
-Repository: \url{https://github.com/gauravsu617/Awesome-agentic-ai-error-propagation}. Confirm that this URL is the intended public repository and that the current branch contains the files described here. Insert a commit hash, exact reproduction command, data provenance, and license after verifying them. Do not publish restricted data or secrets.
+Repository: \url{https://github.com/gauravsu617/Awesome-agentic-ai-error-propagation}. The multi-seed input is tracked at \texttt{atr-submission/results/predictions/multi\_seed\_results.csv}. From the repository root, run \texttt{python atr-submission/evaluate\_phaseiv.py --input atr-submission/results/predictions/multi\_seed\_results.csv --outdir atr-submission/results/phase\_iv\_recomputed}. Preserve the evaluator output and generated plots. The source notebook uses a synthetic error-generation rule; this is not real-agent trace data. Confirm the intended author metadata and distribution rights before submission.
 
 \section*{Acknowledgment of AI Assistance}
 AI assistance was used to help structure and draft this manuscript and supporting documentation. The author must verify every source, inspect the code, rerun the analysis, confirm all numerical values, and disclose AI use according to institutional policy. This statement should be adjusted to match the actual tools and work performed.
