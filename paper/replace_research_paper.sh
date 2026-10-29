@@ -63,7 +63,7 @@ from pathlib import Path
 p = Path(sys.argv[1])
 s = p.read_text()
 s = s.replace(
-    "**Paper currently in repository:** [RESEARCH_paper.pdf](paper/RESEARCH_paper.pdf) (not replaced by the newer ZIP PDF in this text-file update).",
+    "**Selected replacement manuscript:** [paper/README.md](paper/README.md) documents the newly supplied 13-page PDF and its SHA-256. The binary at [paper/RESEARCH_paper.pdf](paper/RESEARCH_paper.pdf) still needs the local replacement step because this connector cannot upload raw PDF bytes.",
     "**Canonical research paper:** [RESEARCH_paper.pdf](paper/RESEARCH_paper.pdf) — 13-page version; SHA-256 `a4b8bc4d27355c43bb619ac0c15cfeba247de91171199083322060e7f917ef96`."
 )
 p.write_text(s)
