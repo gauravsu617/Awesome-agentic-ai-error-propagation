@@ -1,79 +1,82 @@
 # FINAL ATR Archive Manifest — Updated 29 October 2026
 
-This manifest distinguishes (1) files mirrored into the repository, (2) summaries derived from the supplied ZIP, and (3) files still awaiting binary/local Git upload. A file appearing in the source archive is not evidence that its experiment was independently reproduced.
+This manifest distinguishes (1) files mirrored into the repository, (2) summaries derived from the supplied ZIP, and (3) files still awaiting binary/local Git upload. Presence in the source archive is not proof that an experiment has been independently reproduced.
 
-## Updated repository files now available
+## Updated files already present in GitHub
 
 ### Citation
-- `citation/Citation_Verification_Audit.md` — renders the status table, 22 existing review references, seven newer candidates, DOI/source links, and manuscript fixes from `Part_A_Citation_Verification.xlsx`.
-- `aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md` — general audit checklist.
-- Note: the previous repository's `citation/Citation_Verification_Part_A.xlsx` was a one-byte placeholder, not a valid workbook, and has been removed. The actual workbook in the source ZIP is not yet uploaded as a binary file.
+- `citation/Citation_Verification_Audit.md` — 22 original review references, seven newer candidates, recorded citation statuses, DOI/source links, and manuscript corrections from `Part_A_Citation_Verification.xlsx`.
+- `aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md` — audit process checklist.
+- The old `citation/Citation_Verification_Part_A.xlsx` repository object was a one-byte placeholder, not a valid workbook, and has been removed. The original workbook from the ZIP is not yet mirrored as a binary file.
 
 ### Dataset
-- `datasets/datasets.md` — adds the HotpotQA distractor validation protocol (planned verifier experiment), details fault states C1–C4, reports source-archive simulation summaries, and separates those two experimental designs.
-- It preserves AgentBench, Mind2Web, and ToolBench as external reference benchmarks.
+- `datasets/datasets.md` — HotpotQA distractor validation protocol settings, fault states and C1–C4 checks; source-archive synthetic results; distinction between the planned QA verifier experiment and the simulation; three related benchmark links.
 
-### Implementations and results
-- `implementations/github-repositories.md` — keeps the five curated external implementations and adds the source archive's student notebooks/code and results status.
+### Implementation and results
+- `implementations/github-repositories.md` — preserves the five curated external implementations and adds the source archive's student code/results inventory.
 - `implementations/results/final_comparison.csv`
 - `implementations/results/multi_seed_summary.csv`
 - `implementations/results/validation_report.json`
 - `implementations/results/environment_verification.json`
 - `implementations/results/gpu_verification.json`
 - `implementations/results/README.md`
-- `aitr-submission/evaluate_phaseiv.py` and `aitr-submission/ATR_PHASE_IV_completed_Prompts_12_14.ipynb` — copied evaluation script and Phase IV notebook.
+- `aitr-submission/evaluate_phaseiv.py`
+- `aitr-submission/ATR_PHASE_IV_completed_Prompts_12_14.ipynb`
+
+The compact CSV/JSON files above are transcribed from the ZIP. They are not a substitute for the complete raw CSVs, figures and logs.
 
 ### Paper
-- `paper/README.md` — inventories the newer manuscript candidates in the ZIP, including page counts and the fact that Overleaf/Prism PDFs are byte-identical.
-- `paper/RESEARCH_paper.pdf` was already in the repository before this update and has **not** been replaced by a newer ZIP PDF. Binary PDF replacement requires local Git upload; see `aitr-submission/docs/LOCAL_SYNC_AND_UPLOAD.md`.
+- `paper/README.md` — inventories the ZIP's manuscript candidates and distinguishes the ACM CSUR survey version from the other manuscript drafts.
+- Existing `paper/RESEARCH_paper.pdf` was in the repo before this update and has **not** been replaced by a newer ZIP PDF; a local binary Git push is still required.
 
 ### References
-- `references/references.md` — extends the curated references with the latest citation-audit findings and seven new candidate records.
-- `aitr-submission/references.bib` — bibliography source copied into the repository.
+- `references/references.md` — original 20-paper curated list retained, with the AITR reference audit appendix.
+- `references/references.bib` — corrected bibliography in the references category.
+- `aitr-submission/references.bib` — matching bibliography source for the AITR materials.
 
 ### Tools
-- `tools/tools.md` — preserves five engineering frameworks and adds the workbook's ratings/observations for ResearchRabbit, Litmaps, Semantic Scholar, and Elicit.
+- `tools/tools.md` — five engineering frameworks retained and four literature-discovery tools added with ratings and observations copied from the workbook.
 
-## Present in the source FINAL ATR ZIP, still not mirrored as individual binary/source files
+### Submission notes
+- `aitr-submission/README.md`
+- `aitr-submission/ARCHIVE_MANIFEST.md`
+- `aitr-submission/docs/REPRODUCIBILITY_AUDIT.md`
+- `aitr-submission/docs/LOCAL_SYNC_AND_UPLOAD.md`
 
-### Manuscripts and literature review
+## Source ZIP files still awaiting binary/local Git upload
+
+### Manuscripts and literature-review evidence
 - `ACM_CSUR_Review_Paper_Final.pdf`
 - `agentic_ai_error_propagation_research_paper.pdf`
 - `Overleaf_Final_Paper.pdf`
-- `Prism_Final_Paper.pdf` (same SHA-256 as Overleaf PDF)
+- `Prism_Final_Paper.pdf` (same SHA-256 as the Overleaf PDF)
 - `LiteratureReview_TopicID_MCL2026003_SutariyaGauravKarsanbhai.pdf`
 - `Elicit_Report_Error_Propagation.pdf`
 - `Elicit - Error Propagation in Multi-Step AI-Agent Workflows.pdf`
 - `Elicit_Semantic_Scholar_Evidence_Filled.pdf`
 - `Part_B_Reflection.pdf`
 
-### Dataset/protocol and prompts
+### Protocol and prompt PDFs
 - `AITR_Phase_II_Dataset_Sheet_and_Frozen_Protocol_MCL2026003.pdf`
 - `AITR_Prompts_01_02_MCL2026003.pdf`
 - `AITR Prompts 03-05 Literature-to-Experiment Package (MCL2026003).pdf`
 
-### Code and data
+### Code, raw data, and phase deliverables
 - `ATR_PHASE_III_CODE.ipynb`
 - `ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb`
-- `main.tex`
-- `main_acmart_overleaf.tex`
-- Full raw `predictions/baseline_results.csv`, `predictions/propagation_results.csv`, and `predictions/multi_seed_results.csv` from `agentic_error_propagation_results - Copy.zip`.
+- `main.tex`, `main_acmart_overleaf.tex`
+- Full raw CSVs in `agentic_error_propagation_results - Copy.zip` (400-row baseline, 800-row propagation, 24,000-row multi-seed results) and its figures/logs.
+- `Phase4.zip`, `Phase5.zip`, `Phase_VI_Complete_Package.zip`
 
-### Citation and tool evidence
+### Workbooks, exports, and figures
 - `Part_A_Citation_Verification.xlsx`
 - `Lab4_Literature_List_and_Tool_Tables.xlsx`
-- `Part_B_Collection_Export.ris`
-- `ResearchRabbit_Collection_Export.ris`
-- `Part_B_Citation_Map_ResearchRabbit.png`
-- `Part_B_Citation_Map_Litmaps.png`
-
-### Figures and nested archives
+- `Part_B_Collection_Export.ris`, `ResearchRabbit_Collection_Export.ris`
+- `Part_B_Citation_Map_ResearchRabbit.png`, `Part_B_Citation_Map_Litmaps.png`
 - `Figures/fig1_workflow.png` through `Figures/fig4_taxonomy.png`
-- `Phase4.zip`, `Phase5.zip`, `Phase_VI_Complete_Package.zip`
-- `agentic_error_propagation_results - Copy.zip`
 
-The compact summary CSVs and selected JSON logs listed above are transcribed from the archive. They are not the full raw run data and the logs have not been independently regenerated during this update.
+The full source files remain available in the supplied FINAL ATR ZIP. Use the category mapping in [LOCAL_SYNC_AND_UPLOAD.md](docs/LOCAL_SYNC_AND_UPLOAD.md) to sync them into their intended folders.
 
 ## Integrity and license note
 
-Before public upload, confirm permission to redistribute all papers, screenshots, figures, datasets, and nested archives. No license file has been added because third-party materials and rights have not been fully audited. Keep experimental claims bounded by the data source, metric definitions, and actual reproduction status.
+Before public upload, confirm permission to redistribute manuscripts, screenshots, figures, datasets, and nested archives. No license file has been added because rights have not been fully audited. Keep experimental claims bounded by the source data, metric definitions, and actual reproduction status.
