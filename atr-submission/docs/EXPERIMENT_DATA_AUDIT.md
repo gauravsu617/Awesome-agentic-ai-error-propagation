@@ -42,3 +42,29 @@ python atr-submission\evaluate_phaseiv.py --input atr-submission\results\predict
 ```
 
 The evaluator requires pandas, numpy, and matplotlib. Preserve the input CSV and compare the newly generated summary and plots against the values above. Any discrepancy should be investigated and documented rather than silently overwritten.
+
+
+## Standalone regeneration workflow
+
+A standalone script transcribed from the final multi-seed simulation cell in
+`notebooks/ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb` is available at
+`simulate_phaseiii.py`. It writes to a separate directory so that the committed
+input CSVs are not overwritten.
+
+From the repository root, run:
+
+```cmd
+python atr-submission\simulate_phaseiii.py --outdir atr-submission\results\phase_iii_reproduced
+```
+
+This should generate 24,000 rows (30 seeds, four rates, two conditions, and 100
+trials per seed/rate/condition), a summary CSV, and a JSON manifest with SHA-256
+checksums. Compare the regenerated CSVs to the committed files before describing
+the experiment as independently reproduced. The script is a faithful standalone
+transcription of the notebook cell, but the regeneration command must actually
+be run and its output inspected on the target machine.
+
+The evaluator also exports paired mean-difference confidence intervals to
+`phaseiv_comparison.csv` when the input contains `seed`, `trial`, and
+`error_rate` columns. Run the updated evaluator after pulling the latest
+repository changes; preserve its console output and generated artifacts.
