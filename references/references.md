@@ -1,120 +1,92 @@
-# References
+# References: 23-Paper Bibliography
 
-This file contains the 20 scholarly papers curated for the repository.
+This is the current 23-reference catalog for the project **Error Propagation in Multi-Step Agentic AI Workflows for Research Automation**. It is aligned to the repository's `references.bib` file. The links point to arXiv, publisher, ACM, or conference records where available.
 
-## 1. Agent Reasoning and Reflection
+> **Citation integrity note:** This catalog is a working bibliography. Before submitting the manuscript, verify each reference's final author list, venue/year, DOI, and whether the cited paper directly supports the associated claim. See the [citation verification audit](../citation/Citation_Verification_Audit.md) for specific records that still need attention.
 
-1. Yao, S. et al. (2023). **ReAct: Synergizing Reasoning and Acting in Language Models.** ICLR.
-   https://arxiv.org/abs/2210.03629
+## Agent reasoning and reflection
 
-2. Shinn, N. et al. (2023). **Reflexion: Language Agents with Verbal Reinforcement Learning.** arXiv.
-   https://arxiv.org/abs/2303.11366
+1. **Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2023).** *ReAct: Synergizing Reasoning and Acting in Language Models.* International Conference on Learning Representations (ICLR).  
+   [Paper](https://arxiv.org/abs/2210.03629) · [DOI](https://doi.org/10.48550/arXiv.2210.03629)
 
-3. Yao, S. et al. (2023). **Tree of Thoughts: Deliberate Problem Solving with Large Language Models.** NeurIPS.
-   https://arxiv.org/abs/2305.10601
+2. **Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q. V., & Zhou, D. (2022).** *Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.* Advances in Neural Information Processing Systems, 35, 24824–24837.  
+   [Paper](https://arxiv.org/abs/2201.11903) · [DOI](https://doi.org/10.48550/arXiv.2201.11903)
 
-4. Park, J. S. et al. (2023). **Generative Agents: Interactive Simulacra of Human Behavior.** UIST.
-   https://arxiv.org/abs/2304.03442
+3. **Wang, X., Wei, J., Schuurmans, D., Le, Q. V., Chi, E. H., Narang, S., Chowdhery, A., & Zhou, D. (2023).** *Self-Consistency Improves Chain of Thought Reasoning in Language Models.* International Conference on Learning Representations (ICLR).  
+   [Paper](https://arxiv.org/abs/2203.11171) · [Google Research record](https://research.google/pubs/self-consistency-improves-chain-of-thought-reasoning-in-language-models/)
 
-5. Wang, G. et al. (2023). **Voyager: An Open-Ended Embodied Agent with Large Language Models.** arXiv.
-   https://arxiv.org/abs/2305.16291
+4. **Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T., Cao, Y., & Narasimhan, K. (2023).** *Tree of Thoughts: Deliberate Problem Solving with Large Language Models.* Advances in Neural Information Processing Systems, 36.  
+   [Paper](https://arxiv.org/abs/2305.10601)
 
-## 2. Tool Use and Multi-Agent Systems
+5. **Shinn, N., Cassano, F., Berman, E., Gopinath, A., Narasimhan, K., & Yao, S. (2023).** *Reflexion: Language Agents with Verbal Reinforcement Learning.* Advances in Neural Information Processing Systems, 36, 8634–8652.  
+   [Paper](https://arxiv.org/abs/2303.11366) · [DOI](https://doi.org/10.48550/arXiv.2303.11366)
 
-6. Schick, T. et al. (2023). **Toolformer: Language Models Can Teach Themselves to Use Tools.** arXiv.
-   https://arxiv.org/abs/2302.04761
+## Tool use, multi-agent systems, and agent memory
 
-7. Qin, Y. et al. (2023). **ToolLLM: Facilitating Large Language Models to Master 16,000+ Real-World APIs.** arXiv.
-   https://arxiv.org/abs/2307.16789
+6. **Schick, T., Dwivedi-Yu, J., Dessì, R., Raileanu, R., Lomeli, M., Hambro, E., Zettlemoyer, L., Cancedda, N., & Scialom, T. (2023).** *Toolformer: Language Models Can Teach Themselves to Use Tools.* Advances in Neural Information Processing Systems, 36.  
+   [Paper](https://arxiv.org/abs/2302.04761)
 
-8. Wu, Q. et al. (2023). **AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation.** arXiv.
-   https://arxiv.org/abs/2308.08155
+7. **Qin, Y. et al. (2024).** *ToolLLM: Facilitating Large Language Models to Master 16,000+ Real-World APIs.* International Conference on Learning Representations (ICLR).  
+   [Paper](https://arxiv.org/abs/2307.16789) · [ICLR proceedings](https://proceedings.iclr.cc/paper_files/paper/2024/hash/28e50ee5b72e90b50e7196fde8ea260e-Abstract-Conference.html)
 
-9. Hong, S. et al. (2023). **MetaGPT: Meta Programming for Multi-Agent Collaborative Framework.** arXiv.
-   https://arxiv.org/abs/2308.00352
+8. **Wu, Q. et al. (2024).** *AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation.* Conference on Language Modeling (COLM).  
+   [Paper](https://arxiv.org/abs/2308.08155)
 
-10. Shen, Y. et al. (2023). **HuggingGPT: Solving AI Tasks with ChatGPT and Its Friends in Hugging Face.** NeurIPS.
-    https://arxiv.org/abs/2303.17580
+9. **Hong, S. et al. (2024).** *MetaGPT: Meta Programming for a Multi-Agent Collaborative Framework.* International Conference on Learning Representations (ICLR).  
+   [Paper](https://arxiv.org/abs/2308.00352) · [ICLR proceedings](https://proceedings.iclr.cc/paper_files/paper/2024/hash/6507b115562bb0a305f1958ccc87355a-Abstract-Conference.html)
 
-## 3. Retrieval and Grounding
+10. **Park, J. S., O’Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023).** *Generative Agents: Interactive Simulacra of Human Behavior.* Proceedings of the 36th ACM Symposium on User Interface Software and Technology (UIST), 1–22.  
+    [ACM paper](https://doi.org/10.1145/3586183.3606763)
 
-11. Lewis, P. et al. (2020). **Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.** NeurIPS.
-    https://arxiv.org/abs/2005.11401
+11. **Wang, G. et al. (2023).** *Voyager: An Open-Ended Embodied Agent with Large Language Models.* arXiv preprint.  
+    [Paper](https://arxiv.org/abs/2305.16291)
 
-12. Asai, A. et al. (2024). **Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection.** ICLR.
-    https://arxiv.org/abs/2310.11511
+12. **Dongre, V. et al. (2025; preprint first posted in 2024).** *ReSpAct: Harmonizing Reasoning, Speaking, and Acting Towards Building Large Language Model-Based Conversational AI Agents.* International Workshop on Spoken Dialogue Systems Technology (IWSDS), 72–102.  
+    [Paper](https://arxiv.org/abs/2411.00927)
 
-13. Yao, S. et al. (2022). **WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents.** NeurIPS.
-    https://arxiv.org/abs/2207.01206
+## Retrieval, grounding, and evidence-supported generation
 
-14. Deng, X. et al. (2023). **Mind2Web: Towards a Generalist Agent for the Web.** NeurIPS.
-    https://arxiv.org/abs/2306.06070
+13. **Lewis, P. et al. (2020).** *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.* Advances in Neural Information Processing Systems, 33, 9459–9474.  
+    [Paper](https://arxiv.org/abs/2005.11401) · [DOI](https://doi.org/10.48550/arXiv.2005.11401)
 
-15. Dongre, V. et al. (2024). **ReSpAct: Harmonizing Reasoning, Speaking, and Acting Towards Building Large Language Model-Based Conversational AI Agents.** arXiv.
-    https://arxiv.org/abs/2411.00927
+14. **Asai, A., Wu, Z., Wang, Y., Sil, A., & Hajishirzi, H. (2024).** *Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection.* International Conference on Learning Representations (ICLR).  
+    [Paper](https://arxiv.org/abs/2310.11511)
 
-## 4. Evaluation and Reliability
+15. **Gao, T., Yen, H., Yu, J., & Chen, D. (2023).** *Enabling Large Language Models to Generate Text with Citations.* Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP), 6465–6488.  
+    [ACL Anthology](https://doi.org/10.18653/v1/2023.emnlp-main.398)
 
-16. Liu, X. et al. (2023). **AgentBench: Evaluating LLMs as Agents.** arXiv / ICLR.
-    https://arxiv.org/abs/2308.03688
+16. **Min, S. et al. (2023).** *FActScore: Fine-Grained Atomic Evaluation of Factual Precision in Long Form Text Generation.* Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP), 12076–12100.  
+    [ACL Anthology](https://doi.org/10.18653/v1/2023.emnlp-main.741)
 
-17. Zhou, S. et al. (2023). **WebArena: A Realistic Web Environment for Building Autonomous Agents.** arXiv / ICLR.
-    https://arxiv.org/abs/2307.13854
+## Benchmarks and long-horizon agent evaluation
 
-18. Mialon, G. et al. (2023). **GAIA: A Benchmark for General AI Assistants.** arXiv.
-    https://arxiv.org/abs/2311.12983
+17. **Liu, X. et al. (2024).** *AgentBench: Evaluating LLMs as Agents.* International Conference on Learning Representations (ICLR).  
+    [Paper](https://arxiv.org/abs/2308.03688)
 
-19. Yang, J. et al. (2024). **SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering.** NeurIPS.
-    https://arxiv.org/abs/2405.15793
+18. **Zhou, S. et al. (2024).** *WebArena: A Realistic Web Environment for Building Autonomous Agents.* International Conference on Learning Representations (ICLR).  
+    [Paper](https://arxiv.org/abs/2307.13854) · [ICLR proceedings](https://proceedings.iclr.cc/paper_files/paper/2024/hash/4410c0711e9154a7a2d26f9b3816d1ef-Abstract-Conference.html)
 
-20. Debenedetti, E. et al. (2024). **AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents.** arXiv.
-    https://arxiv.org/abs/2406.13352
+19. **Deng, X. et al. (2023).** *Mind2Web: Towards a Generalist Agent for the Web.* Advances in Neural Information Processing Systems, 36, 28091–28114.  
+    [Paper](https://arxiv.org/abs/2306.06070)
 
-## Relevance to This Repository
+20. **Mialon, G. et al. (2024; preprint posted in 2023).** *GAIA: A Benchmark for General AI Assistants.* International Conference on Learning Representations (ICLR).  
+    [Paper](https://arxiv.org/abs/2311.12983)
 
-These papers collectively cover the major components of multi-step agentic workflows:
+21. **Jimenez, C. E. et al. (2024).** *SWE-bench: Can Language Models Resolve Real-World GitHub Issues?* International Conference on Learning Representations (ICLR).  
+    [Paper](https://arxiv.org/abs/2310.06770) · [ICLR proceedings](https://proceedings.iclr.cc/paper_files/paper/2024/hash/edac78c3e300629acfe6cbe9ca88fb84-Abstract-Conference.html)
 
-* Reasoning
-* Planning
-* Reflection
-* Memory
-* Tool use
-* Multi-agent collaboration
-* Retrieval
-* External grounding
-* Web interaction
-* Agent evaluation
-* Long-horizon tasks
-* Reliability and robustness
+22. **Nakano, R. et al. (2021).** *WebGPT: Browser-Assisted Question-Answering with Human Feedback.* arXiv preprint.  
+    [Paper](https://arxiv.org/abs/2112.09332)
 
-They provide the scholarly foundation for studying how errors can arise and propagate across agentic AI research workflows.
+## Explainability and auditability
 
+23. **Dwivedi, R. et al. (2023).** *Explainable AI (XAI): Core Ideas, Techniques, and Solutions.* ACM Computing Surveys, 55(9), Article 194, 33 pages.  
+    [ACM paper](https://doi.org/10.1145/3561048)
 
-## Updated AITR Literature and Citation-Audit Findings — 29 October 2026
+## Bibliography source and citation audit
 
-The supplied FINAL ATR ZIP contains `Part_A_Citation_Verification.xlsx` and `references.bib`. The bibliography source is also mirrored at [aitr-submission/references.bib](../aitr-submission/references.bib). The workbook records 22 original review references with 15 fully supported, six partially supported, and one unsupported/misattributed citation; it lists seven new candidates, two marked fully supported and five still requiring verification. These are workbook-reported statuses, not an independent re-audit in this commit.
+- **BibTeX:** [`references.bib`](references.bib)
+- **Citation status and required manuscript corrections:** [Citation Verification Audit](../citation/Citation_Verification_Audit.md)
+- **Paper version index:** [Paper README](../paper/README.md)
 
-### Newer topic-relevant papers
-
-1. Cemri et al. (2025). **Why Do Multi-Agent LLM Systems Fail?** [DOI](https://doi.org/10.48550/arXiv.2503.13657). Workbook status: fully supported; recommended for the multi-agent failure-taxonomy claim.
-2. **Where LLM Agents Fail and How They Can Learn From Failures** (2025). [DOI](https://doi.org/10.48550/arXiv.2509.25370). Workbook status: fully supported; recommended as a close match to the project's focus.
-3. Roder et al. (2025). **Detecting Pipeline Failures through Fine-Grained Analysis of Web Agents.** [DOI](https://doi.org/10.48550/arXiv.2509.14382). Check figures against the primary paper before use.
-4. Zhang et al. (2025). **Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems.** [DOI](https://doi.org/10.48550/arXiv.2505.00212). Confirm venue, identifiers, and numerical claims.
-5. Liu et al. (2026). **PropUQ-MAS: Propagation-Aware Uncertainty Quantification for LLM Multi-Agent Systems.** [ACL Anthology](https://aclanthology.org/2026.emnlp-main.891/). Hold pending primary-source verification.
-6. Toro Isaza et al. (2026). **Context or Capability? Debugging Agentic Workflows.** [IBM Research](https://research.ibm.com/publications/context-or-capability-debugging-agentic-workflows). Hold pending primary-source verification.
-7. Bateman et al. (2026). **Agent Error Simulator: Fault Injection for Testing Recovery in Agentic Workflows.** [IIT GRC publication page](https://grc.iit.edu/gnosis/publications/bateman-2026-agent-error-simulator-3c7d/). Venue and details need verification.
-
-See the [full citation verification audit](../citation/Citation_Verification_Audit.md) for the per-paper status and source links.
-
-### Manuscript corrections identified by the workbook
-
-- Replace placeholder DOI text in the reference list with actual identifiers.
-- Keep AutoGen and MetaGPT citations for framework descriptions, but do not use them as direct evidence for correlated-error claims; the workbook marks P10 unsupported/misattributed and P11 partially supported, and recommends N01 for the specific failure-mode claim.
-- Reword Self-Consistency as sampling multiple reasoning paths and selecting the most consistent answer.
-- Soften claims that Reflexion makes subsequent drafts more forceful or that Generative Agents directly demonstrates memory-error propagation.
-- Label the claim that citation-generation and FActScore work does not measure error propagation as the review author's gap observation, not as a finding from those papers.
-- Correct the ReSpAct title spelling/venue/year, and use a consistent GAIA version/year.
-
-## How to use these records
-
-Use the original 20-paper list above as the curated repository collection. Use the AITR bibliography and its audit table for the manuscript's expanded reference set. Never treat an abstract-level or workbook-labelled record as verified evidence for a specific sentence until the primary source has been checked.
+Reference count: **23**. This catalog count refers to this bibliography file; curated links and datasets elsewhere in the repository are not additional entries here.
