@@ -339,7 +339,7 @@ The repository includes a selected AITR source-and-audit subset for **Error Prop
 - [Citation integrity audit checklist](aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md)
 - [Instructions to sync remaining archive files](aitr-submission/docs/LOCAL_SYNC_AND_UPLOAD.md)
 
-The research package distinguishes existing artifacts from experiments that still require execution or verification. Do not interpret the presence of a notebook, result archive, or manuscript as proof that all experiments were executed successfully. Results should be reported only after running the documented workflow and preserving logs.
+The research package distinguishes existing artifacts from experiments that still require execution or verification. Do not interpret the presence of a notebook, result archive, or manuscript as proof that all experiments were executed successfully. Results should be reported only after running the documented workflow and preserving logs. The ZIP-derived Phase IV–VI reports and checklists are now linked from the [AITR documentation index](aitr-submission/docs/ZIP_ARCHIVE_INVENTORY.md); original binary artifacts are still being mirrored selectively.
 
 ## License
 

@@ -1,4 +1,4 @@
-# FINAL ATR Archive Manifest — Updated 29 October 2026
+# FINAL ATR Archive Manifest — Updated 30 October 2026
 
 This manifest distinguishes (1) files mirrored into the repository, (2) summaries derived from the supplied ZIP, and (3) files still awaiting binary/local Git upload. Presence in the source archive is not proof that an experiment has been independently reproduced.
 
@@ -75,7 +75,7 @@ The compact CSV/JSON files above are transcribed from the ZIP. They are not a su
 - `Part_B_Citation_Map_ResearchRabbit.png`, `Part_B_Citation_Map_Litmaps.png`
 - `Figures/fig1_workflow.png` through `Figures/fig4_taxonomy.png`
 
-The full source files remain available in the supplied FINAL ATR ZIP. Use the category mapping in [LOCAL_SYNC_AND_UPLOAD.md](docs/LOCAL_SYNC_AND_UPLOAD.md) to sync them into their intended folders.
+The full source files remain available in the supplied FINAL ATR ZIP. The new Markdown documents above summarize source-package content and do not replace original notebooks, spreadsheets, LaTeX, figures, or raw result files. Use [LOCAL_SYNC_AND_UPLOAD.md](docs/LOCAL_SYNC_AND_UPLOAD.md) to sync those original artifacts into their intended folders. Some source artifacts remain unuploaded because this GitHub connector supports text-content writes but not direct local-file transfer from the mounted ZIP.
 
 ## Integrity and license note
 

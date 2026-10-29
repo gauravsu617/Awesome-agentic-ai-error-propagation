@@ -12,9 +12,9 @@ The project topic visible in the supplied artifacts is error propagation in mult
 - `ATR_PHASE_IV_completed_Prompts_12_14.ipynb`: Phase IV protocol, CSV-validation, summary, and plotting notebook; it requires an actual results CSV to run.
 - `references.bib`: bibliography source.
 - `Prompts_and_Search_Queries.txt`: saved literature-search query notes.
-- `docs/REPRODUCIBILITY_AUDIT.md`: evidence and reproducibility checklist.
+- `docs/REPRODUCIBILITY_AUDIT.md`: evidence and reproducibility checklist.\n- `docs/ZIP_ARCHIVE_INVENTORY.md`: source ZIP inventory and mapping guidance.\n- `docs/PHASE_III_RESEARCH_AND_RESULTS.md`: Phase III artifact inventory and verification steps.\n- `docs/PHASE_IV_EVALUATION_REPORT.md` and `docs/PHASE_IV_REPORT.md`: Phase IV metrics, validation, and provisional-result caveats.\n- `docs/PHASE_V_MANUSCRIPT_REVIEW.md`, `docs/PHASE_V_PEER_REVIEW.md`, `docs/PHASE_V_REVISION_LOG.md`, `docs/PHASE_V_SUBMISSION_CHECKLIST.md`: Phase V review and evidence gates.\n- `docs/PHASE_VI_AI_USE_AND_RESEARCH_INTEGRITY.md` and `docs/PHASE_VI_ACTIVITY_LOG_GUIDE.md`: AI-use and authentic activity-log guidance.
 
-The original archive also contains LaTeX manuscript sources, Phase III notebooks, PDFs, the citation-verification and tool-rating workbooks, figures, RIS exports, and nested phase ZIP files. Selected summaries are now in the root category folders, but the complete raw/binary files are not all mirrored here; see the [category-by-category archive manifest](ARCHIVE_MANIFEST.md). The pre-existing paper artifact in this repository is available at [paper/RESEARCH_paper.pdf](../paper/RESEARCH_paper.pdf).
+The original archive also contains LaTeX manuscript sources, Phase III notebooks, PDFs, the citation-verification and tool-rating workbooks, figures, RIS exports, and nested phase ZIP files. Phase III–VI source-derived documentation has been added, but the original notebooks, spreadsheets, raw results, figures, and manuscript sources are not all mirrored here. See the [category-by-category archive manifest](ARCHIVE_MANIFEST.md) and [ZIP inventory](docs/ZIP_ARCHIVE_INVENTORY.md). The pre-existing paper artifact in this repository is available at [paper/RESEARCH_paper.pdf](../paper/RESEARCH_paper.pdf).
 
 ## Running the Phase IV evaluator
 
