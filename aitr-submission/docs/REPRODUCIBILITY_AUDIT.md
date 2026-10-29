@@ -1,6 +1,6 @@
 # Reproducibility and Submission Audit
 
-This audit is a documentation checklist based on the ATR assignment requirements. It is a claim that the listed experiments have been executed or independently reproduced.
+This audit is a documentation checklist based on the ATR assignment requirements. It is not a claim that the listed experiments have been executed or independently reproduced.
 
 ## 1. Research continuity and question
 
