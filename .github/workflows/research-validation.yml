@@ -1,0 +1,75 @@
+name: Research reproduction and paper build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install analysis dependencies
+        run: python -m pip install --upgrade pip pandas numpy matplotlib
+
+      - name: Reproduce Phase III simulation
+        run: python atr-submission/simulate_phaseiii.py --outdir atr-submission/results/phase_iii_reproduced
+
+      - name: Check regenerated CSV against committed source data
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          from pathlib import Path
+          original = pd.read_csv("atr-submission/results/predictions/multi_seed_results.csv")
+          reproduced = pd.read_csv("atr-submission/results/phase_iii_reproduced/multi_seed_results.csv")
+          sort_cols = ["seed", "error_rate", "model", "trial"]
+          original = original.sort_values(sort_cols).reset_index(drop=True)
+          reproduced = reproduced.sort_values(sort_cols).reset_index(drop=True)
+          if list(original.columns) != list(reproduced.columns):
+              raise SystemExit(f"Column mismatch: {list(original.columns)} != {list(reproduced.columns)}")
+          if len(original) != 24000 or len(reproduced) != 24000:
+              raise SystemExit(f"Expected 24000 rows; original={len(original)}, reproduced={len(reproduced)}")
+          pd.testing.assert_frame_equal(original, reproduced, check_dtype=False, check_exact=True)
+          print("PASS: regenerated CSV exactly matches committed source data (24,000 rows).")
+          PY
+
+      - name: Evaluate Phase IV results
+        run: python atr-submission/evaluate_phaseiv.py --input atr-submission/results/predictions/multi_seed_results.csv --outdir atr-submission/results/phase_iv_ci
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-publishers texlive-bibtex-extra
+
+      - name: Compile manuscript and bibliography
+        working-directory: atr-submission/paper
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          bibtex main
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+
+      - name: Upload validation outputs and manuscript PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-validation-outputs
+          path: |
+            atr-submission/results/phase_iii_reproduced/
+            atr-submission/results/phase_iv_ci/
+            atr-submission/paper/main.pdf
+          if-no-files-found: error
