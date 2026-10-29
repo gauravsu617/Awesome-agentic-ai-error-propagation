@@ -1,6 +1,6 @@
 # Datasets and Experiment Protocols
 
-This page is updated from the supplied FINAL ATR ZIP (especially `AITR_Phase_II_Dataset_Sheet_and_Frozen_Protocol_MCL2026003.pdf` and `agentic_error_propagation_results - Copy.zip`). It separates the planned HotpotQA verifier experiment from the separate synthetic error-propagation simulation in the results archive. They must not be described as the same experiment.
+This page is updated from the supplied FINAL ATR ZIP (especially `ATR_Phase_II_Dataset_Sheet_and_Frozen_Protocol_MCL2026003.pdf` and `agentic_error_propagation_results - Copy.zip`). It separates the planned HotpotQA verifier experiment from the separate synthetic error-propagation simulation in the results archive. They must not be described as the same experiment.
 
 ## A. Primary dataset named by the frozen-protocol document: HotpotQA
 
