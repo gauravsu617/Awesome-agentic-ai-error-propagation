@@ -27,6 +27,9 @@ The compact CSV/JSON files above are transcribed from the ZIP. They are not a su
 
 ### Paper
 - `paper/README.md` — inventories the ZIP's manuscript candidates and distinguishes the ACM CSUR survey version from the other manuscript drafts.
+- `aitr-submission/paper/main.tex` — Phase V IEEE-style draft source mirrored from the nested Phase5 package; provisional numerical results and author placeholders remain.
+- `aitr-submission/paper/references.bib` — intentionally incomplete placeholder from the Phase V package, not a submission-ready bibliography.
+- `aitr-submission/paper/README.md` — manuscript verification and build instructions.
 - Existing `paper/RESEARCH_paper.pdf` was in the repo before this update and has **not** been replaced by a newer ZIP PDF; a local binary Git push is still required.
 
 ### References
