@@ -1,6 +1,6 @@
 # FINAL ATR Archive Manifest — Updated 30 October 2026
 
-This manifest distinguishes (1) files mirrored into the repository, (2) summaries derived from the supplied ZIP, and (3) files still awaiting binary/local Git upload. Presence in the source archive is not proof that an experiment has been independently reproduced.
+This manifest distinguishes files mirrored into the repository from source-archive materials still awaiting upload. Presence in the source archive is not proof that an experiment has been independently reproduced. Presence in the source archive is not proof that an experiment has been independently reproduced.
 
 ## Updated files already present in GitHub
 
@@ -65,10 +65,7 @@ The full raw CSVs, experiment figures, and environment/validation logs are now m
 - `AITR Prompts 03-05 Literature-to-Experiment Package (MCL2026003).pdf`
 
 ### Code, raw data, and phase deliverables
-- `ATR_PHASE_III_CODE.ipynb` — mirrored at `atr-submission/notebooks/ATR_PHASE_III_CODE.ipynb`.
-- `ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb` — mirrored at `atr-submission/notebooks/ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb`.
 - `main.tex`, `main_acmart_overleaf.tex`
-- Full raw CSVs in `agentic_error_propagation_results - Copy.zip` (400-row baseline, 800-row propagation, 24,000-row multi-seed results) and its figures/logs — now mirrored at `atr-submission/results/`.
 - `Phase4.zip`, `Phase5.zip`, `Phase_VI_Complete_Package.zip`
 
 ### Workbooks, exports, and figures
@@ -76,7 +73,7 @@ The full raw CSVs, experiment figures, and environment/validation logs are now m
 - `Lab4_Literature_List_and_Tool_Tables.xlsx`
 - `Part_B_Collection_Export.ris`, `ResearchRabbit_Collection_Export.ris`
 - `Part_B_Citation_Map_ResearchRabbit.png`, `Part_B_Citation_Map_Litmaps.png`
-- `Figures/fig1_workflow.png` through `Figures/fig4_taxonomy.png` — mirrored at `atr-submission/figures/`.
+- `Part_B_Citation_Map_ResearchRabbit.png`, `Part_B_Citation_Map_Litmaps.png` — citation-map images remain unmirrored.
 
 The original FINAL ATR ZIP remains the source for additional manuscripts, PDFs, spreadsheets, RIS exports, citation-map images, and nested phase ZIP files that are still not mirrored. The Phase III notebooks, four project figures, full raw CSVs, result figures, and logs are now uploaded. The [experimental data audit](docs/EXPERIMENT_DATA_AUDIT.md) records the checks completed and the remaining reproduction steps.
 
