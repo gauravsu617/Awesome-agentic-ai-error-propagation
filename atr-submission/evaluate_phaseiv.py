@@ -76,6 +76,34 @@ def main():
             "propagation_failure_rate": fails["propagation"],
             "failure_rate_difference_prop_minus_ind": fails["propagation"] - fails["independent"],
         })
+
+        # Use matched trials for uncertainty on the stage-error difference.
+        # This is valid only when the input contains a usable pairing key.
+        pair_keys = [c for c in ["seed", "trial", "error_rate"] if c in df.columns]
+        if {"seed", "trial", "error_rate"}.issubset(df.columns):
+            paired = df.pivot(index=["seed", "trial", "error_rate"],
+                              columns="model", values="stage_errors")
+            if {"independent", "propagation"}.issubset(paired.columns):
+                paired["difference_prop_minus_ind"] = (
+                    paired["propagation"] - paired["independent"]
+                )
+                paired_summary = paired.groupby(level="error_rate")["difference_prop_minus_ind"].agg(
+                    paired_n="count", paired_mean_difference="mean", paired_sd="std"
+                )
+                paired_summary["paired_se"] = (
+                    paired_summary["paired_sd"] / np.sqrt(paired_summary["paired_n"])
+                )
+                paired_summary["paired_ci95_low"] = (
+                    paired_summary["paired_mean_difference"] - 1.96 * paired_summary["paired_se"]
+                )
+                paired_summary["paired_ci95_high"] = (
+                    paired_summary["paired_mean_difference"] + 1.96 * paired_summary["paired_se"]
+                )
+                paired_summary = paired_summary.drop(columns=["paired_sd"])
+                comparison = comparison.merge(
+                    paired_summary.reset_index(), on="error_rate", how="left"
+                )
+
         comparison.to_csv(out / "phaseiv_comparison.csv", index=False)
 
     for metric, ylabel, title, filename in [
