@@ -330,11 +330,12 @@ A final report may contain genuine sources and fluent academic writing while sti
 
 ## AITR Implementation-Based Research Submission
 
-The repository also includes the implementation-based AITR project package on **Error Propagation in Multi-Step Agentic AI Workflows for Research Automation**. It contains the research protocol, paper drafts, implementation notebooks, evaluation script, evidence and citation files, figures, and phase deliverables.
+The repository now includes a selected AITR source-and-audit subset for **Error Propagation in Multi-Step Agentic AI Workflows for Research Automation**. The full supplied FINAL ATR archive is not yet mirrored file-for-file; see the archive manifest for the distinction between files present in GitHub and files still only in the original package.
 
 - [Open the AITR submission package](aitr-submission/README.md)
+- [FINAL ATR archive manifest and mirror status](aitr-submission/ARCHIVE_MANIFEST.md)
 - [Reproducibility and evidence audit](aitr-submission/docs/REPRODUCIBILITY_AUDIT.md)
-- [GitHub publishing and local setup notes](aitr-submission/docs/GITHUB_PUBLISHING.md)
+- [Citation integrity audit checklist](aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md)
 
 The research package distinguishes existing artifacts from experiments that still require execution or verification. Do not interpret the presence of a notebook, result archive, or manuscript as proof that all experiments were executed successfully. Results should be reported only after running the documented workflow and preserving logs.
 
