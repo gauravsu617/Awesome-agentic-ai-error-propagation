@@ -40,8 +40,7 @@ Reliable research automation requires more than fluent final text. Important app
 
 This research paper examines how errors can enter different stages of an agentic research workflow and affect downstream outputs. It discusses error sources, propagation mechanisms, current reliability approaches, research challenges, and future directions.
 
-**Paper currently in repository:** [RESEARCH_paper.pdf](paper/RESEARCH_paper.pdf) (not replaced by the newer ZIP PDF in this text-file update).  
-**Manuscript version inventory:** [paper/README.md](paper/README.md) lists the latest PDFs and LaTeX sources present in FINAL ATR and explains which binary files still need uploading.
+**Selected replacement manuscript:** [paper/README.md](paper/README.md) documents the newly supplied 13-page PDF and its SHA-256. The binary at [paper/RESEARCH_paper.pdf](paper/RESEARCH_paper.pdf) still needs the local replacement step because this connector cannot upload raw PDF bytes.
 
 ### Main Workflow
 
