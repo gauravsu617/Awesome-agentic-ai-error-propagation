@@ -1,4 +1,4 @@
-﻿# GitHub Implementations and Local Research Code
+# GitHub Implementations and Local Research Code
 
 This page distinguishes five maintained external reference implementations from the student's experiment code bundled in FINAL ATR. The source archive files have not all been uploaded to this repository as binaries; the archive manifest lists files that still need syncing.
 
@@ -33,20 +33,20 @@ Evaluation environment for prompt-injection attacks and defenses in tool-using L
 
 | Artifact in ZIP | Purpose / notes | Current repository mirror status |
 |---|---|---|
-| `ATR_PHASE_III_CODE.ipynb` | Phase III implementation notebook (248,304 bytes in source ZIP) | Not yet mirrored as a separate file |
-| `ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb` | Completed Phase III notebook (242,410 bytes) | Not yet mirrored as a separate file |
+| `ATR_PHASE_III_CODE.ipynb` | Phase III implementation notebook (248,304 bytes in source ZIP) | Mirrored as `atr-submission/notebooks/ATR_PHASE_III_CODE.ipynb` |
+| `ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb` | Completed Phase III notebook (242,410 bytes) | Mirrored as `atr-submission/notebooks/ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb` |
 | `ATR_PHASE_IV_completed_Prompts_12_14.ipynb` | Phase IV evaluation notebook | Mirrored as `atr-submission/ATR_PHASE_IV_completed_Prompts_12_14.ipynb` |
 | `evaluate_phaseiv.py` | CSV validation, summaries, comparison table, and plots | Mirrored as `atr-submission/evaluate_phaseiv.py` |
-| `agentic_error_propagation_results - Copy.zip` | Raw simulation CSVs, summary CSVs, figures, and validation/environment logs | Selected summary tables and report are mirrored below; full archive is not yet mirrored |
+| `agentic_error_propagation_results - Copy.zip` | Raw simulation CSVs, summary CSVs, figures, and validation/environment logs | Extracted raw CSVs, result figures, and logs are mirrored under `atr-submission/results/`; the original ZIP is not mirrored |
 | `Phase4.zip` | Phase IV report, DOCX, evaluator, notebook | Not mirrored as binary archive |
 | `Phase5.zip` | Peer-review/revision package and manuscript source | Not mirrored as binary archive |
 | `Phase_VI_Complete_Package.zip` | AI-use and research-integrity report, activity log, checklist | Not mirrored as binary archive |
 
 ## C. Results included in the latest source ZIP
 
-The results ZIP reports 400 rows in baseline results, 800 in propagation results, and 24,000 in multi-seed results. The summary table below comes from its `predictions/final_comparison.csv`:
+The results archive contains 400 baseline rows, 800 propagation rows, and 24,000 multi-seed rows. These CSVs are now mirrored under `atr-submission/results/predictions/`; see [the experimental data audit](../atr-submission/docs/EXPERIMENT_DATA_AUDIT.md) for structural checks and recalculated summaries.
 
-| Base error rate | Mean errors: independent | Mean errors: propagation | Delta (propagation âˆ’ independent) | Failure rate: independent | Failure rate: propagation |
+| Base error rate | Mean errors: independent | Mean errors: propagation | Delta (propagation − independent) | Failure rate: independent | Failure rate: propagation |
 |---:|---:|---:|---:|---:|---:|
 | 0.0 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
 | 0.1 | 0.3847 | 0.4917 | 0.1070 | 0.3360 | 0.3360 |
