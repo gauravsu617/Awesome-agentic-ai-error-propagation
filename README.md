@@ -55,7 +55,7 @@ The citation-integrity audit checks whether references and claims in the AI-assi
 
 ## Curated Research Papers
 
-Exactly 20 distinct scholarly papers are listed below as the repository's curated baseline list. For the AITR project's expanded 22-reference verification table, seven newer candidates, and paper-specific corrections, see [Citation Verification Audit](citation/Citation_Verification_Audit.md) and [references/references.md](references/references.md). Each paper in the curated list has a one-line relevance description.
+The overview below retains 20 curated papers with short relevance descriptions. The current project bibliography is the separate [23-reference catalog](references/references.md), aligned with [references.bib](references/references.bib). Use the [Citation Verification Audit](citation/Citation_Verification_Audit.md) to check source-support notes and pending reference verification before submission.
 
 ### Agent Reasoning and Reflection
 
