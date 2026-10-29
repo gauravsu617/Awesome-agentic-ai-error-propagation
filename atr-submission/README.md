@@ -35,7 +35,7 @@ python -m pip install pandas numpy matplotlib
 python evaluate_phaseiv.py --input path/to/multi_seed_results.csv --outdir results/phase_iv
 ```
 
-The input CSV must include `error_rate`, `model`, `stage_errors`, and `workflow_failed`. If the evaluator finds invalid or inconsistent rows, it exits with an error. The script is an analysis utility. The committed CSVs have been checked and their summary statistics recalculated, but the evaluator and data-generation notebook still need a clean, documented rerun before claiming independent reproduction.
+The input CSV must include `error_rate`, `model`, `stage_errors`, and `workflow_failed`. If the evaluator finds invalid or inconsistent rows, it exits with an error. The script is an analysis utility. The committed CSV was reproduced exactly by `simulate_phaseiii.py` in the GitHub Actions clean Ubuntu/Python 3.12 environment (24,000 rows, exact frame comparison), and `evaluate_phaseiv.py` completed successfully in the same workflow. This verifies consistency of the committed generator, data, and evaluator; it does not independently validate the scientific assumptions or generalize the simulation to real agents. See the [automated validation workflow](../.github/workflows/research-validation.yml) and its run history.
 
 ## Research integrity and reproducibility
 
