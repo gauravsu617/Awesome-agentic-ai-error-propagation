@@ -25,7 +25,7 @@ The nested results archive contains:
 - `logs/gpu_verification.json`
 
 ## Interpretation boundary
-The existence of notebooks, CSVs, figures, and logs in the ZIP establishes that these artifacts were supplied; it does not independently establish that they run in a clean environment or that their numerical results are correct. The raw trial-level data must be checked against the evaluator and the methods before numerical results are treated as final.
+The notebooks, CSVs, figures, and logs are now mirrored in the repository. The raw CSVs have been structurally checked and the multi-seed summary statistics recalculated; see [the experimental data audit](EXPERIMENT_DATA_AUDIT.md). This does not establish that the generator and evaluator run in a clean environment, so a documented rerun remains necessary.
 
 ## Required verification
 1. Inspect notebook execution order and outputs; restart the kernel and run all cells in a clean environment.
@@ -37,4 +37,4 @@ The existence of notebooks, CSVs, figures, and logs in the ZIP establishes that 
 7. Do not infer GPU execution from a GPU verification file alone; inspect the log and the actual experiment path.
 
 ## Status
-**Source artifacts located in the supplied ZIP; independent reproduction and numerical verification remain required.**
+**Source artifacts are mirrored; CSV integrity and summary arithmetic have been checked. Independent execution of the generator and evaluator remains required.**
