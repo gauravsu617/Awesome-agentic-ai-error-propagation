@@ -2,7 +2,7 @@
 
 This is the current 23-reference catalog for the project **Error Propagation in Multi-Step Agentic AI Workflows for Research Automation**. It is aligned to the repository's `references.bib` file. The links point to arXiv, publisher, ACM, or conference records where available.
 
-> **Citation integrity note:** This catalog is a working bibliography. Before submitting the manuscript, verify each reference's final author list, venue/year, DOI, and whether the cited paper directly supports the associated claim. See the [citation verification audit](../citation/Citation_Verification_Audit.md) for specific records that still need attention.
+> **Citation integrity note:** This is a 23-item working bibliography, not a claim that every item directly studies error propagation. Agent reasoning, tool-use, retrieval, and benchmark papers are often contextual or methodological support; cite them only for what they actually evaluate. The generic XAI reference (item 23) is the most indirect fit and should be retained only if the manuscript discusses explainability/auditability. Two high-priority, directly relevant failure-analysis papers—Cemri et al. (2025) and Zhu et al. (2025)—were confirmed in the latest audit but are not yet part of this 23-entry catalog. See the [citation verification audit](../citation/Citation_Verification_Audit.md) before revising the manuscript.
 
 ## Agent reasoning and reflection
 
