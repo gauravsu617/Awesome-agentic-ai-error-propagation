@@ -336,6 +336,7 @@ The repository now includes a selected AITR source-and-audit subset for **Error 
 - [FINAL ATR archive manifest and mirror status](aitr-submission/ARCHIVE_MANIFEST.md)
 - [Reproducibility and evidence audit](aitr-submission/docs/REPRODUCIBILITY_AUDIT.md)
 - [Citation integrity audit checklist](aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md)
+- [Instructions to sync remaining archive files](aitr-submission/docs/LOCAL_SYNC_AND_UPLOAD.md)
 
 The research package distinguishes existing artifacts from experiments that still require execution or verification. Do not interpret the presence of a notebook, result archive, or manuscript as proof that all experiments were executed successfully. Results should be reported only after running the documented workflow and preserving logs.
 
