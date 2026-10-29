@@ -6,6 +6,7 @@ This manifest records the artifacts that were present in the supplied FINAL ATR 
 
 - aitr-submission/README.md — package scope and execution notes
 - aitr-submission/evaluate_phaseiv.py — Phase IV CSV validation and summary/plot generation script
+- aitr-submission/ATR_PHASE_IV_completed_Prompts_12_14.ipynb — Phase IV protocol/evaluation notebook (actual results CSV still required)
 - aitr-submission/references.bib — bibliography source
 - aitr-submission/Prompts_and_Search_Queries.txt — saved literature search queries
 - aitr-submission/docs/REPRODUCIBILITY_AUDIT.md — execution, evidence, baseline, and reporting checklist
@@ -33,7 +34,6 @@ The repository also already had paper/RESEARCH_paper.pdf before this update; do 
 ### Notebooks and code
 - ATR_PHASE_III_CODE.ipynb
 - ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb
-- ATR_PHASE_IV_completed_Prompts_12_14.ipynb
 - main.tex
 - main_acmart_overleaf.tex
 
