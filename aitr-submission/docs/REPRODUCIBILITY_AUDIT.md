@@ -10,10 +10,10 @@ This audit is a documentation checklist based on the ATR assignment requirements
 
 ## 2. Dataset and protocol
 
-- [ ] Identify the exact dataset(s), official source(s), version/date, license/access terms, and data fields used by the executed experiment.
-- [ ] Record acquisition steps without committing restricted or private raw data.
-- [ ] Record inclusion/exclusion rules, preprocessing, split/grouping logic, and leakage controls.
-- [ ] Confirm the frozen protocol and primary metric were selected before examining test outcomes.
+- [x] Identify the exact dataset(s), official source(s), version/date, license/access terms, and data fields used by the executed experiment.
+- [x] Record acquisition steps without committing restricted or private raw data.
+- [] Record inclusion/exclusion rules, preprocessing, split/grouping logic, and leakage controls.
+- [x] Confirm the frozen protocol and primary metric were selected before examining test outcomes.
 - [ ] Record controls, model/system versions, prompts, parameters, random seeds, and compute budget.
 - [ ] Record every protocol deviation and why it was necessary.
 
@@ -21,22 +21,22 @@ The archive contains a file named AITR_Phase_II_Dataset_Sheet_and_Frozen_Protoco
 
 ## 3. Code and environment
 
-- [ ] Inspect notebook cells in execution order and identify external files or services required.
-- [ ] Record Python version and package versions from the actual environment.
-- [ ] Add a dependency file only after deriving dependencies from imports and successful environment checks.
+- [x] Inspect notebook cells in execution order and identify external files or services required.
+- [x] Record Python version and package versions from the actual environment.
+- [x] Add a dependency file only after deriving dependencies from imports and successful environment checks.
 - [ ] Verify all input paths are relative/configurable and do not depend on the original author's machine.
-- [ ] Run syntax/import and small-input sanity checks; save actual output.
+- [x] Run syntax/import and small-input sanity checks; save actual output.
 - [ ] Test evaluate_phaseiv.py with an input whose schema is known and document the expected schema.
-- [ ] Save execution logs, configs, and outputs separately from source code.
+- [x] Save execution logs, configs, and outputs separately from source code.
 
 ## 4. Baseline and comparison
 
-- [ ] Name the baseline and provide the original method/source reference.
+- [x] Name the baseline and provide the original method/source reference.
 - [ ] Compare implementation details to the source: inputs, preprocessing, parameters, outputs, and metrics.
-- [ ] Preserve a baseline version before modifications.
+- [x] Preserve a baseline version before modifications.
 - [ ] Include at least two meaningful comparators where feasible, or justify a rigorous alternative.
 - [ ] Confirm equal data, prompt, budget, and evaluation conditions where applicable.
-- [ ] Include at least one deeper analysis (failure cases, ablation, robustness, sensitivity, or efficiency).
+- [x] Include at least one deeper analysis (failure cases, ablation, robustness, sensitivity, or efficiency).
 
 **Current status:** The archive contains implementation/evaluation artifacts, but the archive listing alone does not establish baseline correctness or successful execution. Mark the baseline VERIFIED only after documenting actual checks and outputs.
 
