@@ -78,7 +78,6 @@ def main():
         mean_stage_errors=("stage_errors", "mean"),
         std_stage_errors=("stage_errors", "std"),
         failure_rate=("workflow_failed", "mean"),
-        n=("stage_errors", "size"),
     )
     summary["ci95_half_width"] = (
         1.96 * summary["std_stage_errors"] / math.sqrt(3000)
