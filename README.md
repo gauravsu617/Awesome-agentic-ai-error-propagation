@@ -327,6 +327,17 @@ An error that begins as a retrieval or source-selection problem can become a res
 
 A final report may contain genuine sources and fluent academic writing while still answering the wrong research question. Therefore, citation authenticity alone is not sufficient for research reliability.
 
+
+## AITR Implementation-Based Research Submission
+
+The repository also includes the implementation-based AITR project package on **Error Propagation in Multi-Step Agentic AI Workflows for Research Automation**. It contains the research protocol, paper drafts, implementation notebooks, evaluation script, evidence and citation files, figures, and phase deliverables.
+
+- [Open the AITR submission package](aitr-submission/README.md)
+- [Reproducibility and evidence audit](aitr-submission/docs/REPRODUCIBILITY_AUDIT.md)
+- [GitHub publishing and local setup notes](aitr-submission/docs/GITHUB_PUBLISHING.md)
+
+The research package distinguishes existing artifacts from experiments that still require execution or verification. Do not interpret the presence of a notebook, result archive, or manuscript as proof that all experiments were executed successfully. Results should be reported only after running the documented workflow and preserving logs.
+
 ## License
 
 This repository is intended for academic and educational purposes.
