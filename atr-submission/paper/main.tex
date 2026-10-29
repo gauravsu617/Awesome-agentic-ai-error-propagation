@@ -63,7 +63,7 @@ F = \mathbb{1}(E > 0),
 where $E$ is the number of stage errors in a workflow. This metric records whether any error occurred, not how many later-stage errors followed the first error.
 
 \section{Experimental Setup and Validation}
-The evaluator should validate required columns, missing values, allowed ranges, consistency between the failure flag and stage-error count, duplicate trial keys, and condition/rate alignment before summarizing results. Any malformed or ambiguous rows must be reported, not silently removed. The analysis should preserve the raw input file and export a traceable summary table and figures.
+The evaluator validates required columns, missing values, allowed ranges, consistency between the failure flag and stage-error count, and duplicate trial keys before summarizing results. The automated run completed without validation errors. The analysis preserves the committed raw input and exports traceable summary tables and figures as workflow artifacts.
 
 \textbf{Data audit status:} the automated workflow successfully regenerated the Phase III output in a clean GitHub-hosted environment and compared it exactly with the committed 24,000-row CSV. The Phase IV evaluator also completed successfully, validating required fields, allowed ranges, failure-flag consistency, and duplicate trial keys, then writing summary/comparison tables and plots. These results support reproducibility of the committed implementation and analysis pipeline. They do not establish that the synthetic assumptions model real agent behavior.
 
@@ -92,7 +92,7 @@ Base rate & $n$/condition & Independent & Propagation & Difference (95\% CI) & A
 The paired records show nonnegative differences for all matched trials; this is consistent with the shared-random-number construction and the propagation rule, and must be interpreted as a property of this simulation design. The binary any-error rate is identical across conditions because the outcome is defined as $F=\mathbb{1}(E>0)$: after a workflow has its first error, additional errors increase the count $E$ but cannot change $F$ from 1 to a larger value.
 
 \section{Discussion}
-If raw-data validation confirms that the propagation condition has a higher mean stage-error count, the result would be consistent with the simulation's intended mechanism: an early error can raise the chance of additional downstream errors. The size of this difference should be described using the verified estimates and uncertainty, not by visual inspection alone.
+In the validated simulation, the propagation condition has a higher mean stage-error count than the independent condition at each nonzero base error rate. The observed differences are 0.107, 0.207, and 0.331 errors per workflow at base rates of 0.1, 0.2, and 0.3, respectively; the paired approximate 95% confidence intervals exclude zero at each of these rates. This is consistent with the programmed mechanism, where a previous-stage error raises the next stage's error probability. It is not evidence that the same effect size occurs in real agents.
 
 Equal any-error workflow-failure rates would not necessarily contradict increased stage-error accumulation. Under $F=\mathbb{1}(E>0)$, a workflow becomes a failure as soon as its first error occurs. Additional downstream errors can increase $E$ without changing $F$ from zero to one. Therefore, stage-error count is more sensitive to propagation severity, while the binary indicator measures the probability that a workflow experiences at least one error.
 
