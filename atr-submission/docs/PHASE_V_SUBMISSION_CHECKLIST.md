@@ -6,7 +6,7 @@
 - [ ] Verify the research brief and question against earlier phases.
 - [ ] Verify the exact simulation rule from source code.
 - [ ] Run evaluation on the original trial-level CSV.
-- [ ] Replace or remove all provisional numerical claims.
+- [x] Replace provisional manuscript values with statistics recalculated from the committed raw multi-seed CSV; clean evaluator rerun remains pending.
 - [ ] Add verified original references and complete BibTeX.
 - [ ] Add actual figures/tables exported by the evaluator.
 - [ ] Check methods, results, discussion and limitations against evidence.
@@ -25,9 +25,9 @@
 ## Repository/reproducibility
 - [ ] Confirm repository URL, branch and commit.
 - [ ] Include verified dependencies and versions.
-- [ ] Document data provenance, licensing, and exact reproduction commands.
-- [ ] Define the raw CSV schema and column meanings.
-- [ ] Preserve evaluator logs, checksums and generated outputs.
+- [x] Document the raw CSV locations, simulation provenance, and exact evaluator command; licensing review remains pending.
+- [x] Document the raw CSV row counts, required fields, failure-flag definition, and paired key in `EXPERIMENT_DATA_AUDIT.md`.
+- [ ] Preserve output from a clean evaluator run, checksums, and regenerated outputs (pending).
 - [ ] Test the workflow from a clean clone.
 
 A checked box should mean the corresponding evidence exists and has been inspected, not merely that the task is planned.
