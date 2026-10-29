@@ -79,7 +79,6 @@ def main():
 
         # Use matched trials for uncertainty on the stage-error difference.
         # This is valid only when the input contains a usable pairing key.
-        pair_keys = [c for c in ["seed", "trial", "error_rate"] if c in df.columns]
         if {"seed", "trial", "error_rate"}.issubset(df.columns):
             paired = df.pivot(index=["seed", "trial", "error_rate"],
                               columns="model", values="stage_errors")
