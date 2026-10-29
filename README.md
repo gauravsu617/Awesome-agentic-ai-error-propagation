@@ -369,7 +369,8 @@ awesome-agentic-ai-error-propagation/
 │   ├── RESEARCH_paper.pdf
 │   └── README.md
 ├── references/
-│   └── references.md
+│   ├── references.md
+│   └── references.bib
 ├── tools/
 │   └── tools.md
 └── aitr-submission/
