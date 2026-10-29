@@ -109,3 +109,17 @@ Do not force-push. If the remote advances, fetch and reconcile before pushing.
 - The HotpotQA verifier design in the Phase II PDF is a planned QA experiment; its freeze checklist still marks several items open.
 - The provided result CSVs describe a separate synthetic `independent` versus `propagation` simulation. Do not present them as HotpotQA verifier results or real-LLM recovery rates.
 - Verify rights before committing PDFs, screenshots, datasets, or nested archives. Do not add secrets or private data.
+
+
+## Replace the paper PDF only
+
+The user-uploaded `research paper.pdf` is byte-identical to `FINAL ATR/agentic_ai_error_propagation_research_paper.pdf` (470,387 bytes; SHA-256 `a4b8bc4d27355c43bb619ac0c15cfeba247de91171199083322060e7f917ef96`). It is a 13-page draft, not the distinct 14-page Overleaf/Prism version.
+
+Download `research-paper-replacement.zip` from this conversation and extract it into your local clone root so it overwrites `paper/RESEARCH_paper.pdf`. Then run:
+
+```bash
+chmod +x apply_research_paper_replacement.sh
+./apply_research_paper_replacement.sh
+```
+
+The script checks the PDF SHA-256, updates the paper-status text in `README.md` and `paper/README.md`, commits those changes with the PDF replacement, and pushes to `origin main`. It does not force-push. Review `git status` first if you have unrelated local changes.
