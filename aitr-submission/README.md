@@ -9,6 +9,7 @@ The project topic visible in the supplied artifacts is error propagation in mult
 ## Files currently mirrored here
 
 - `evaluate_phaseiv.py`: validates a results CSV and writes grouped summaries, comparison tables (when both `independent` and `propagation` models are present), and plots.
+- `ATR_PHASE_IV_completed_Prompts_12_14.ipynb`: Phase IV protocol, CSV-validation, summary, and plotting notebook; it requires an actual results CSV to run.
 - `references.bib`: bibliography source.
 - `Prompts_and_Search_Queries.txt`: saved literature-search query notes.
 - `docs/REPRODUCIBILITY_AUDIT.md`: evidence and reproducibility checklist.
