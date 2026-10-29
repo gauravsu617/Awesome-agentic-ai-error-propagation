@@ -14,7 +14,7 @@ The project topic visible in the supplied artifacts is error propagation in mult
 - `Prompts_and_Search_Queries.txt`: saved literature-search query notes.
 - `docs/REPRODUCIBILITY_AUDIT.md`: evidence and reproducibility checklist.
 
-The original archive also contains LaTeX manuscript sources, Jupyter notebooks, PDFs, spreadsheets, figures, RIS exports, and nested phase ZIP files. Those files are listed in the original local package but are not all mirrored as separate GitHub files in this directory. The pre-existing paper artifact in this repository is available at [paper/RESEARCH_paper.pdf](../paper/RESEARCH_paper.pdf).
+The original archive also contains LaTeX manuscript sources, Phase III notebooks, PDFs, the citation-verification and tool-rating workbooks, figures, RIS exports, and nested phase ZIP files. Selected summaries are now in the root category folders, but the complete raw/binary files are not all mirrored here; see the [category-by-category archive manifest](ARCHIVE_MANIFEST.md). The pre-existing paper artifact in this repository is available at [paper/RESEARCH_paper.pdf](../paper/RESEARCH_paper.pdf).
 
 ## Running the Phase IV evaluator
 
