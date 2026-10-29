@@ -40,7 +40,7 @@ Reliable research automation requires more than fluent final text. Important app
 
 This research paper examines how errors can enter different stages of an agentic research workflow and affect downstream outputs. It discusses error sources, propagation mechanisms, current reliability approaches, research challenges, and future directions.
 
-**Paper:** [AI-Assisted Research Paper](paper/AI_Assisted_Research_Paper.pdf)
+**Paper:** [Paper currently in this repository](paper/RESEARCH_paper.pdf)
 
 ### Main Workflow
 
@@ -50,7 +50,7 @@ This research paper examines how errors can enter different stages of an agentic
 
 The citation-integrity audit checks whether references and claims in the AI-assisted research paper are reliable. The audit considers bibliographic metadata, source existence, identifiers, and whether cited evidence supports the associated claim.
 
-**Audit:** [Citation Integrity Audit](citation-audit/Citation_Integrity_Audit.pdf)
+**Audit:** [Citation Integrity Audit Checklist](aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md)
 
 ## Curated Research Papers
 
@@ -353,7 +353,7 @@ awesome-agentic-ai-error-propagation/
 │
 ├── README.md
 ├── paper/
-│   └── AI_Assisted_Research_Paper.pdf
+│   └── RESEARCH_paper.pdf
 ├── citation-audit/
 │   └── Citation_Integrity_Audit.pdf
 ├── references/
