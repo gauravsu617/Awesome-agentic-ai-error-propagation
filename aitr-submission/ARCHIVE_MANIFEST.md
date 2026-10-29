@@ -56,7 +56,7 @@ The repository also already had paper/RESEARCH_paper.pdf before this update; do 
 - Phase_VI_Complete_Package.zip
 - agentic_error_propagation_results - Copy.zip
 
-The original package also contained a README, .gitignore, and a short submission-scope note. The package's binary files, notebooks, and LaTeX source files need a separate authenticated file upload or a local Git push to complete the full mirror.
+The original package also contained its own README and a short submission-scope note. The package's binary files, notebooks, and LaTeX source files need a separate authenticated file upload or a local Git push to complete the full mirror.
 
 ## Integrity note
 
