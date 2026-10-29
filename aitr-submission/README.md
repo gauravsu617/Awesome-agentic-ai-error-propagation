@@ -35,4 +35,4 @@ The input CSV must include `error_rate`, `model`, `stage_errors`, and `workflow_
 - Trace every manuscript result and figure to a real output file and code cell/command.
 - Verify third-party redistribution rights before committing PDFs, datasets, screenshots, or nested archives.
 
-See [the reproducibility audit](docs/REPRODUCIBILITY_AUDIT.md) for the checklist and status labels.
+See [the reproducibility audit](docs/REPRODUCIBILITY_AUDIT.md), [citation integrity checklist](docs/CITATION_INTEGRITY_AUDIT.md), and [instructions for syncing the remaining archive artifacts](docs/LOCAL_SYNC_AND_UPLOAD.md).
