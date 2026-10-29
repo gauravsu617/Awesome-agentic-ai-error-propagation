@@ -1,0 +1,108 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{hyperref}
+\title{Error Propagation in Multi-Step Agentic AI Workflows for Research Automation: A Controlled Simulation Study}
+\author{\IEEEauthorblockN{[AUTHOR NAME]}
+\IEEEauthorblockA{[DEPARTMENT / INSTITUTION]\\[EMAIL OR STUDENT ID, IF REQUIRED]}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Multi-step research automation pipelines can pass intermediate outputs from one stage to the next, creating a plausible route by which an early error affects later processing. This paper presents a controlled, four-stage simulation comparing an independent-error condition with a conditional downstream-propagation condition. The primary outcome is the mean number of stage errors per workflow; the secondary outcome is the proportion of workflows containing at least one error. Earlier project notes report increasing mean stage-error differences between conditions as the base error rate rises, but the raw trial-level CSV was not available for independent verification when this draft was prepared. Therefore, those values are treated as provisional and must not be presented as final results until the included evaluator has been run on the original data. The study is intended as a transparent simulation of a mechanism, not as evidence of the reliability of deployed language-model agents. The paper specifies the experimental comparison, evaluation checks, interpretation boundaries, and reproducibility requirements needed to assess whether conditional propagation increases accumulated stage errors.
+\end{abstract}
+
+\begin{IEEEkeywords}
+agentic AI, error propagation, research automation, simulation, reproducibility, workflow reliability
+\end{IEEEkeywords}
+
+\section{Introduction}
+Research automation increasingly involves a sequence of dependent activities, such as question formulation, literature retrieval, evidence extraction, synthesis, and report generation. When one stage produces an incorrect or incomplete intermediate artifact, later stages may reuse it. This motivates a focused question: under otherwise matched conditions, does a conditional downstream-error mechanism increase the number of errors accumulated across a multi-stage workflow relative to an independent-error model?
+
+This study uses a four-stage simulation to isolate that mechanism. It does not evaluate a production agent, a real literature-review benchmark, or the factual correctness of generated research claims. The intended contribution is a small, inspectable controlled comparison that makes its assumptions and outcome definitions explicit. Any claim about real agentic systems requires a separate empirical validation using actual agent traces and independently assessed task outcomes.
+
+\section{Research Question and Contributions}
+The primary research question is: \emph{In a four-stage simulated research workflow, how does a conditional downstream error-propagation rule affect stage-error accumulation compared with a constant per-stage error probability?}
+
+The planned contributions are:
+\begin{itemize}
+  \item a controlled comparison between independent errors and conditional downstream propagation;
+  \item an evaluation procedure that validates raw records before producing summaries and plots; and
+  \item an explicit analysis of why stage-error count and binary workflow-failure rate answer different questions.
+\end{itemize}
+These are contributions of experimental design and analysis, not a claim of publication-level novelty.
+
+\section{Related Work}
+\textbf{Evidence needed before submission.} This section must be completed using original, verified publications on (i) reliability of multi-step LLM/agent workflows, (ii) cascading or propagated errors in pipelines, and (iii) evaluation of research automation or tool-using agents. For each source, record the exact claim supported and confirm it against the original paper. Do not insert citations based solely on secondary summaries or AI-generated references. The current project files available for this draft do not provide a verified bibliography specific to the error-propagation topic; references are therefore intentionally not fabricated.
+
+\section{Methodology}
+\subsection{Workflow and Conditions}
+The simulated workflow has four ordered stages. Two conditions are compared:
+\begin{itemize}
+  \item \textbf{Independent:} each stage draws its error according to the baseline per-stage error process without increasing later-stage error probability because of an earlier error.
+  \item \textbf{Propagation:} an earlier error can conditionally increase the probability of errors at downstream stages.
+\end{itemize}
+The exact propagation function, random-number implementation, and trial-generation code must be cited from the actual source file or repository commit in the final version. If the code does not match these descriptions, revise this section to describe the implementation rather than the intention.
+
+\subsection{Experimental Settings}
+The project notes describe base error rates of 0.0, 0.1, 0.2, and 0.3 and a four-stage workflow. They also mention 30 seeds and 100 trials per seed, condition, and rate. These settings are \textbf{reported from project notes, not verified from the raw CSV in this draft}. Before submission, confirm the trial count, random-seed policy, parameter values, and whether conditions use matched seeds. Report software versions and the exact command used to generate the data.
+
+\subsection{Outcomes}
+The primary outcome is the mean number of stage errors per workflow. The secondary outcome is the fraction of workflows with at least one stage error. For the secondary outcome, a Wilson 95\% confidence interval may be reported if the underlying records are independent Bernoulli trials and the trial definition is appropriate. If paired seeds or trials are used, add a paired analysis for the primary comparison rather than treating all observations as independent.
+
+The binary failure indicator is defined as
+\[
+F = \mathbb{1}(E > 0),
+\]
+where $E$ is the number of stage errors in a workflow. This metric records whether any error occurred, not how many later-stage errors followed the first error.
+
+\section{Experimental Setup and Validation}
+The evaluator should validate required columns, missing values, allowed ranges, consistency between the failure flag and stage-error count, duplicate trial keys, and condition/rate alignment before summarizing results. Any malformed or ambiguous rows must be reported, not silently removed. The analysis should preserve the raw input file and export a traceable summary table and figures.
+
+\textbf{Reproducibility status:} the raw trial-level CSV was not available in the workspace used to prepare this manuscript. Consequently, the result summaries below are provisional transcriptions from earlier project notes. Run the included evaluation script against the original CSV, retain its console output, and replace this paragraph with the actual validation status before submission.
+
+\section{Results}
+Table~\ref{tab:provisional} reproduces values noted earlier in the project conversation solely to make the verification task explicit. These values are \textbf{not independently recomputed or verified in this draft}; they must be replaced by the evaluator's actual output or removed if they cannot be reproduced.
+
+\begin{table}[ht]
+\centering
+\caption{Provisional mean stage-error counts; verify against raw CSV before use.}
+\label{tab:provisional}
+\begin{tabular}{rrrr}
+\toprule
+Base rate & Independent & Propagation & Difference \\
+\midrule
+0.0 & 0.0000 & 0.0000 & 0.0000 \\
+0.1 & 0.3847 & 0.4917 & 0.1070 \\
+0.2 & 0.7887 & 0.9953 & 0.2067 \\
+0.3 & 1.1790 & 1.5100 & 0.3310 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Earlier notes also report equal any-error failure rates between conditions at base rates 0.1, 0.2, and 0.3 (0.3360, 0.5787, and 0.7447, respectively). These values are likewise provisional. They should be included only if the raw CSV confirms them and the evaluator confirms the failure-flag definition.
+
+\section{Discussion}
+If raw-data validation confirms that the propagation condition has a higher mean stage-error count, the result would be consistent with the simulation's intended mechanism: an early error can raise the chance of additional downstream errors. The size of this difference should be described using the verified estimates and uncertainty, not by visual inspection alone.
+
+Equal any-error workflow-failure rates would not necessarily contradict increased stage-error accumulation. Under $F=\mathbb{1}(E>0)$, a workflow becomes a failure as soon as its first error occurs. Additional downstream errors can increase $E$ without changing $F$ from zero to one. Therefore, stage-error count is more sensitive to propagation severity, while the binary indicator measures the probability that a workflow experiences at least one error.
+
+No conclusion should be drawn about real-world research automation reliability from this toy simulation alone. The simulation does not directly measure hallucination, citation validity, source relevance, synthesis quality, or end-to-end research correctness.
+
+\section{Limitations and Threats to Validity}
+First, this is a simulated process; its conclusions depend on the chosen error-generation rule. Second, a four-stage workflow may not represent the varied structures and feedback loops of deployed agents. Third, a stage error is a simplified binary event and may not capture severity, detectability, reversibility, or semantic dependence. Fourth, the primary data file has not been independently re-evaluated for this draft. Fifth, any confidence interval or significance test depends on the actual sampling and pairing structure. Finally, the current draft lacks a verified, topic-specific bibliography; claims in Related Work must be supported before submission.
+
+\section{Conclusion}
+This paper specifies a controlled simulation for examining whether conditional downstream error propagation increases the number of errors accumulated in a multi-stage research workflow. The key methodological point is that accumulated error count and the probability of any workflow error are distinct outcomes. The numerical observations remain provisional until recomputed from raw trial-level data. The study should be presented as a mechanism-isolation simulation, with real-agent validation and verified literature synthesis left as necessary future work.
+
+\section*{Data and Code Availability}
+Repository: \url{https://github.com/gauravsu617/Awesome-agentic-ai-error-propagation}. Confirm that this URL is the intended public repository and that the current branch contains the files described here. Insert a commit hash, exact reproduction command, data provenance, and license after verifying them. Do not publish restricted data or secrets.
+
+\section*{Acknowledgment of AI Assistance}
+AI assistance was used to help structure and draft this manuscript and supporting documentation. The author must verify every source, inspect the code, rerun the analysis, confirm all numerical values, and disclose AI use according to institutional policy. This statement should be adjusted to match the actual tools and work performed.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}
