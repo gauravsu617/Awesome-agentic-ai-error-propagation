@@ -1,32 +1,27 @@
-# Paper and Manuscript Versions
+# Research Paper — Canonical Replacement
 
-Updated from the supplied FINAL ATR ZIP dated 29 October 2026.
+## Selected manuscript
 
-## Manuscript candidates in the source archive
+The PDF uploaded in this conversation as `research paper.pdf` is the intended replacement for `paper/RESEARCH_paper.pdf`.
 
-| Source archive file | Pages | Size | Notes |
-|---|---:|---:|---|
-| `ACM_CSUR_Review_Paper_Final.pdf` | 15 | 937,992 bytes | ACM Computing Surveys small-format survey manuscript; title includes “A Survey.” |
-| `agentic_ai_error_propagation_research_paper.pdf` | 13 | 470,387 bytes | Research-paper draft dated 28 October in PDF metadata. |
-| `Overleaf_Final_Paper.pdf` | 14 | 444,799 bytes | 29 October draft. |
-| `Prism_Final_Paper.pdf` | 14 | 444,799 bytes | SHA-256 identical to the Overleaf PDF; not an independent version. |
-| `main.tex` | — | 84,901 bytes | LaTeX source, with alternate document setup. |
-| `main_acmart_overleaf.tex` | — | 59,893 bytes | Alternate LaTeX source. |
-| `references.bib` | — | 11,198 bytes | Bibliography source. |
+- **Title:** Error Propagation in Multi-Step Agentic AI Workflows for Research Automation
+- **Author shown in PDF:** Sutariya Gaurav Karsanbhai
+- **Pages:** 13
+- **Size:** 470,387 bytes
+- **SHA-256:** `a4b8bc4d27355c43bb619ac0c15cfeba247de91171199083322060e7f917ef96`
+- **Source match:** Byte-identical to `FINAL ATR/agentic_ai_error_propagation_research_paper.pdf`.
+- **Not the same version as:** `Overleaf_Final_Paper.pdf` and `Prism_Final_Paper.pdf` (those are a different, 14-page, byte-identical pair).
 
-The existing [RESEARCH_paper.pdf](RESEARCH_paper.pdf) has not been replaced because the GitHub text-file write interface used for this update cannot upload a binary PDF. Do not assume it is identical to the newest candidate from the ZIP. The full ZIP contains the PDFs and LaTeX sources listed above, which still need a local Git binary upload.
+## Replacement status
 
-## Recommended next steps
+The GitHub copy of `paper/RESEARCH_paper.pdf` is not yet replaced: the GitHub connector exposed text-file writes, but not raw binary PDF upload. The uploaded PDF has been prepared in a small replacement ZIP and a script is provided in [the sync instructions](../aitr-submission/docs/LOCAL_SYNC_AND_UPLOAD.md). After the script is run from a local clone, the path will be updated and the commit can be verified in GitHub.
 
-1. Select one canonical manuscript after checking the assignment's implementation-based research requirements.
-2. Align its title, claims, references, figures, metrics, and results with the actual experiment artifacts.
-3. Apply the corrections in [the citation verification audit](../citation/Citation_Verification_Audit.md).
-4. Upload the selected PDF and matching LaTeX source by local Git push; do not commit all drafts as independent final papers.
-5. Confirm redistribution permissions before publishing third-party copyrighted material.
+This is the selected file because it is the exact PDF supplied by the user. If the assignment requires the newer 14-page Overleaf/Prism version instead, that is a different manuscript and should not be substituted silently.
 
-## Related updated sections
+## Related files
 
-- [Datasets and experiment protocol](../datasets/datasets.md)
-- [Implementation and result artifacts](../implementations/github-repositories.md)
+- [Citation verification audit](../citation/Citation_Verification_Audit.md)
+- [Dataset and experiment protocol](../datasets/datasets.md)
+- [Implementation and result inventory](../implementations/github-repositories.md)
 - [Bibliography](../references/references.md)
 - [Reproducibility audit](../aitr-submission/docs/REPRODUCIBILITY_AUDIT.md)
