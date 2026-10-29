@@ -16,7 +16,7 @@ The PDF attached in this conversation as `research paper.pdf` is the intended re
 
 The connected GitHub writer can update text files but could not upload the attached raw PDF bytes directly. Therefore, the remote `paper/RESEARCH_paper.pdf` has **not been replaced by this edit alone**.
 
-The repository now includes [`replace_research_paper.sh`](replace_research_paper.sh). Download the attached PDF or the [replacement bundle](sandbox:/mnt/data/research-paper-replacement-bundle.zip), clone/pull the repository, and run from a clean local `main` checkout:
+The repository now includes [`replace_research_paper.sh`](replace_research_paper.sh). Download the PDF attachment or the replacement bundle provided in this conversation, clone/pull the repository, and run from a clean local `main` checkout:
 
 ```bash
 bash paper/replace_research_paper.sh "/path/to/research paper.pdf"
