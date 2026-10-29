@@ -40,7 +40,8 @@ Reliable research automation requires more than fluent final text. Important app
 
 This research paper examines how errors can enter different stages of an agentic research workflow and affect downstream outputs. It discusses error sources, propagation mechanisms, current reliability approaches, research challenges, and future directions.
 
-**Paper:** [Paper currently in this repository](paper/RESEARCH_paper.pdf)
+**Paper currently in repository:** [RESEARCH_paper.pdf](paper/RESEARCH_paper.pdf) (not replaced by the newer ZIP PDF in this text-file update).  
+**Manuscript version inventory:** [paper/README.md](paper/README.md) lists the latest PDFs and LaTeX sources present in FINAL ATR and explains which binary files still need uploading.
 
 ### Main Workflow
 
@@ -50,11 +51,12 @@ This research paper examines how errors can enter different stages of an agentic
 
 The citation-integrity audit checks whether references and claims in the AI-assisted research paper are reliable. The audit considers bibliographic metadata, source existence, identifiers, and whether cited evidence supports the associated claim.
 
-**Audit:** [Citation Integrity Audit Checklist](aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md)
+**Audit checklist:** [Citation Integrity Audit Checklist](aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md)  
+**Latest citation review:** [Citation Verification Audit](citation/Citation_Verification_Audit.md), summarising the 22 original references, seven new candidates, recorded statuses, and manuscript corrections from the supplied workbook. The raw XLSX is still in the local ZIP; its former GitHub file was a one-byte placeholder, so it was removed.
 
 ## Curated Research Papers
 
-Exactly 20 distinct scholarly papers are listed below. Each paper has a one-line relevance description.
+Exactly 20 distinct scholarly papers are listed below as the repository's curated baseline list. For the AITR project's expanded 22-reference verification table, seven newer candidates, and paper-specific corrections, see [Citation Verification Audit](citation/Citation_Verification_Audit.md) and [references/references.md](references/references.md). Each paper in the curated list has a one-line relevance description.
 
 ### Agent Reasoning and Reflection
 
@@ -126,7 +128,7 @@ Exactly 20 distinct scholarly papers are listed below. Each paper has a one-line
 
 ## Datasets and Benchmarks
 
-Exactly 3 datasets/benchmarks are included.
+Three external reference benchmarks are curated here. The latest AITR protocol separately names HotpotQA distractor validation as its planned primary dataset; the results ZIP contains a separate synthetic simulation, not HotpotQA question-answer runs. See [Datasets and Experiment Protocols](datasets/datasets.md) for the distinction and status.
 
 ### 1. AgentBench
 
@@ -148,7 +150,7 @@ A tool-use dataset and benchmark involving real-world APIs, useful for studying 
 
 ## Tools and Libraries
 
-Exactly 5 tools/libraries are included.
+Five engineering frameworks remain in the curated list. The latest AITR workbook also records a separate evaluation of four literature-discovery tools (ResearchRabbit, Litmaps, Semantic Scholar, and Elicit); see [tools/tools.md](tools/tools.md) for the workbook's ratings and limitations.
 
 ### 1. LangChain
 
@@ -182,7 +184,7 @@ A framework for programming and optimizing language-model pipelines and modular 
 
 ## GitHub Implementations
 
-Exactly 5 implementations are included.
+Five external reference implementations remain in the curated list. The student's code notebooks, evaluator, and provided result summaries are catalogued in [GitHub Implementations and Local Research Code](implementations/github-repositories.md). Some original binaries from the ZIP are still awaiting upload; see [the archive manifest](aitr-submission/ARCHIVE_MANIFEST.md).
 
 ### 1. AgentBench
 
@@ -350,21 +352,36 @@ Third-party research papers and copyrighted materials should not be uploaded unl
 
 ```text
 awesome-agentic-ai-error-propagation/
-│
 ├── README.md
-├── paper/
-│   └── RESEARCH_paper.pdf
-├── citation-audit/
-│   └── Citation_Integrity_Audit.pdf
-├── references/
-│   └── references.md
+├── citation/
+│   └── Citation_Verification_Audit.md
 ├── datasets/
 │   └── datasets.md
+├── implementations/
+│   ├── github-repositories.md
+│   └── results/
+│       ├── final_comparison.csv
+│       ├── multi_seed_summary.csv
+│       ├── validation_report.json
+│       ├── environment_verification.json
+│       └── gpu_verification.json
+├── paper/
+│   ├── RESEARCH_paper.pdf
+│   └── README.md
+├── references/
+│   └── references.md
 ├── tools/
 │   └── tools.md
-├── implementations/
-│   └── github-repositories.md
-└── LICENSE
+└── aitr-submission/
+    ├── ARCHIVE_MANIFEST.md
+    ├── README.md
+    ├── references.bib
+    ├── ATR_PHASE_IV_completed_Prompts_12_14.ipynb
+    ├── evaluate_phaseiv.py
+    └── docs/
+        ├── CITATION_INTEGRITY_AUDIT.md
+        ├── LOCAL_SYNC_AND_UPLOAD.md
+        └── REPRODUCIBILITY_AUDIT.md
 ```
 
 ## Submission Checklist
