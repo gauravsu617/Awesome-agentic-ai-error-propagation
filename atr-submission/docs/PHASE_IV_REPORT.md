@@ -1,3 +1,5 @@
+> **Status update (30 October 2026):** The historical source-report values below have now been recalculated from the raw CSVs committed under `atr-submission/results/predictions/`. See [the current Phase IV evaluation report](PHASE_IV_EVALUATION_REPORT.md) and [experimental data audit](EXPERIMENT_DATA_AUDIT.md) for the recalculated values and checks. The Python evaluator and data-generation notebook still need a clean documented rerun.
+
 # Phase IV — Source Report Summary
 
 **Source:** `Phase4.zip` inside `FINAL ATR(1).zip`, including `Phase_IV_Report.md`, `evaluate_phaseiv.py`, and the Phase IV notebook.
@@ -27,7 +29,7 @@ If failure is defined as any stage error, later propagated errors may increase s
 | 0.2 | 0.7887 | 0.9953 | 0.2067 |
 | 0.3 | 1.1790 | 1.5100 | 0.3310 |
 
-The report also gives provisional any-error rates 0.3360, 0.5787, and 0.7447 at base rates 0.1, 0.2, and 0.3. These values are transcribed from the supplied report and must be recomputed from raw records before publication.
+The raw CSV confirms any-error rates of 0.3360, 0.5787, and 0.7447 at base rates 0.1, 0.2, and 0.3 for both conditions. These rates follow from the `workflow_failed = (stage_errors > 0)` definition and do not measure terminal-answer correctness.
 
 ## Validation and limitations
 The supplied evaluator is intended to check required columns, missing values, allowed rates/ranges, consistency of the failure flag, duplicate trial keys when seed/trial columns exist, and grouped summaries. The simulation uses synthetic errors and does not establish real-world failure rates for deployed LLM agents.
