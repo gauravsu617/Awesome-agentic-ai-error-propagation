@@ -12,7 +12,7 @@ This audit is a documentation checklist based on the ATR assignment requirements
 
 - [x] Identify the exact dataset(s), official source(s), version/date, license/access terms, and data fields used by the executed experiment.
 - [x] Record acquisition steps without committing restricted or private raw data.
-- [] Record inclusion/exclusion rules, preprocessing, split/grouping logic, and leakage controls.
+- [ ] Record inclusion/exclusion rules, preprocessing, split/grouping logic, and leakage controls.
 - [x] Confirm the frozen protocol and primary metric were selected before examining test outcomes.
 - [ ] Record controls, model/system versions, prompts, parameters, random seeds, and compute budget.
 - [ ] Record every protocol deviation and why it was necessary.
