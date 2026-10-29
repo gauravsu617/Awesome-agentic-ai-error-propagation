@@ -341,9 +341,7 @@ The research package distinguishes existing artifacts from experiments that stil
 
 ## License
 
-This repository is intended for academic and educational purposes.
-
-Original student-created documentation, analysis, and other original repository content may be distributed under the selected open-source license.
+No LICENSE file is currently present, so the repository does not yet state an explicit project license. Before adding one, confirm that the owner has the right to license every included item.
 
 Third-party research papers and copyrighted materials should not be uploaded unless redistribution is permitted. Where possible, link to publisher pages, DOI records, arXiv, official project pages, or other authorized sources.
 
@@ -384,7 +382,7 @@ awesome-agentic-ai-error-propagation/
 - [x] Exactly 5 learning resources
 - [x] Research challenges
 - [x] Research gaps and future directions
-- [x] License information
+- [ ] Add a suitable license after confirming redistribution rights
 - [ ] Verify every external link before submission
 - [ ] Ensure no unauthorized copyrighted PDFs are uploaded
 - [ ] Make at least 5 meaningful Git commits
