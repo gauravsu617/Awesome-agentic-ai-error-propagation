@@ -14,15 +14,9 @@ The PDF attached in this conversation as `research paper.pdf` is the intended re
 
 ## Replacement status
 
-The connected GitHub writer can update text files but could not upload the attached raw PDF bytes directly. Therefore, the remote `paper/RESEARCH_paper.pdf` has **not been replaced by this edit alone**.
+The connected GitHub writer can update text files but cannot upload the attached raw PDF bytes through this operation. Therefore, the remote `paper/RESEARCH_paper.pdf` has **not been replaced**. The script previously referenced for this task is not present at `paper/replace_research_paper.sh`, so do not run that path.
 
-The repository now includes [`replace_research_paper.sh`](replace_research_paper.sh). Download the PDF attachment or the replacement bundle provided in this conversation, clone/pull the repository, and run from a clean local `main` checkout:
-
-```bash
-bash paper/replace_research_paper.sh "/path/to/research paper.pdf"
-```
-
-The script checks the repository origin and branch, fast-forwards `main`, verifies the exact SHA-256, replaces the PDF and indexes, creates a commit, and pushes it. The replacement is complete only after that push succeeds and GitHub shows the PDF blob size as 470,387 bytes with the expected Git blob SHA.
+To replace the binary, download the intended 13-page PDF from the original conversation/source archive, verify its SHA-256 against `a4b8bc4d27355c43bb619ac0c15cfeba247de91171199083322060e7f917ef96`, then replace `paper/RESEARCH_paper.pdf` in a local clone and commit/push it using your normal Git workflow. Review `git status` first and do not force-push. The replacement is complete only after the push succeeds and GitHub shows the expected file.
 
 ## Related project documentation
 
