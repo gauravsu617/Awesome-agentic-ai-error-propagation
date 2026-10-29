@@ -1,6 +1,6 @@
 # FINAL ATR Archive Manifest — Updated 30 October 2026
 
-This manifest distinguishes files mirrored into the repository from source-archive materials still awaiting upload. Presence in the source archive is not proof that an experiment has been independently reproduced. Presence in the source archive is not proof that an experiment has been independently reproduced.
+This manifest distinguishes files mirrored into the repository from source-archive materials still awaiting upload. Presence in the source archive is not proof that an experiment has been independently reproduced.
 
 ## Updated files already present in GitHub
 
@@ -27,7 +27,7 @@ The full raw CSVs, experiment figures, and environment/validation logs are now m
 
 ### Paper
 - `paper/README.md` — inventories the ZIP's manuscript candidates and distinguishes the ACM CSUR survey version from the other manuscript drafts.
-- `atr-submission/paper/main.tex` — Phase V IEEE-style draft source mirrored from the nested Phase5 package; provisional numerical results and author placeholders remain.
+- `atr-submission/paper/main.tex` — Phase V IEEE-style draft source updated with recalculated CSV statistics and references; author/institution placeholders remain, and clean evaluator execution plus LaTeX compilation are still required.
 - `atr-submission/paper/references.bib` — intentionally incomplete placeholder from the Phase V package, not a submission-ready bibliography.
 - `atr-submission/paper/README.md` — manuscript verification and build instructions.
 - Existing `paper/RESEARCH_paper.pdf` was in the repo before this update and has **not** been replaced by a newer ZIP PDF; a local binary Git push is still required.
