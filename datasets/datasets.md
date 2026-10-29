@@ -1,4 +1,4 @@
-# Datasets and Experiment Protocols
+﻿# Datasets and Experiment Protocols
 
 This page is updated from the supplied FINAL ATR ZIP (especially `ATR_Phase_II_Dataset_Sheet_and_Frozen_Protocol_MCL2026003.pdf` and `agentic_error_propagation_results - Copy.zip`). It separates the planned HotpotQA verifier experiment from the separate synthetic error-propagation simulation in the results archive. They must not be described as the same experiment.
 
@@ -8,7 +8,7 @@ This page is updated from the supplied FINAL ATR ZIP (especially `ATR_Phase_II_D
 
 **Research question in the protocol:** In a ReAct-style agent, how often does a corrupted first observation reach the final answer, and does a separate verifier with clean-source access recover more answers than same-model self-critique?
 
-**Task:** multi-hop question answering over Wikipedia paragraphs. The protocol explicitly describes this as a controlled stand-in for a “read source, extract, answer” chain—not a literature-review pipeline. Conclusions should not be generalized directly to automated literature reviews.
+**Task:** multi-hop question answering over Wikipedia paragraphs. The protocol explicitly describes this as a controlled stand-in for a â€œread source, extract, answerâ€ chainâ€”not a literature-review pipeline. Conclusions should not be generalized directly to automated literature reviews.
 
 - Project page: https://hotpotqa.github.io/
 - Official repository named in protocol: https://github.com/hotpotqa/hotpot
@@ -84,4 +84,5 @@ These three resources are curated reference benchmarks. They are not evidence th
 - Keep pilot IDs disjoint from frozen test IDs, and keep supporting facts out of the writer's input.
 - Preserve raw trajectories, fault-injection logs, verifier verdicts, model IDs, timestamps, prompts, seeds, token counts, and scorer outputs.
 - Do not redistribute dataset material or derived files until the official license and applicable share-alike terms have been checked.
-- See [the reproducibility audit](../aitr-submission/docs/REPRODUCIBILITY_AUDIT.md).
+- See [the reproducibility audit](../atr-submission/docs/REPRODUCIBILITY_AUDIT.md).
+

@@ -1,50 +1,50 @@
-# FINAL ATR Archive Manifest — Updated 30 October 2026
+﻿# FINAL ATR Archive Manifest â€” Updated 30 October 2026
 
 This manifest distinguishes (1) files mirrored into the repository, (2) summaries derived from the supplied ZIP, and (3) files still awaiting binary/local Git upload. Presence in the source archive is not proof that an experiment has been independently reproduced.
 
 ## Updated files already present in GitHub
 
 ### Citation
-- `citation/Citation_Verification_Audit.md` — 22 original review references, seven newer candidates, recorded citation statuses, DOI/source links, and manuscript corrections from `Part_A_Citation_Verification.xlsx`.
-- `aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md` — audit process checklist.
+- `citation/Citation_Verification_Audit.md` â€” 22 original review references, seven newer candidates, recorded citation statuses, DOI/source links, and manuscript corrections from `Part_A_Citation_Verification.xlsx`.
+- `atr-submission/docs/CITATION_INTEGRITY_AUDIT.md` â€” audit process checklist.
 - The old `citation/Citation_Verification_Part_A.xlsx` repository object was a one-byte placeholder, not a valid workbook, and has been removed. The original workbook from the ZIP is not yet mirrored as a binary file.
 
 ### Dataset
-- `datasets/datasets.md` — HotpotQA distractor validation protocol settings, fault states and C1–C4 checks; source-archive synthetic results; distinction between the planned QA verifier experiment and the simulation; three related benchmark links.
+- `datasets/datasets.md` â€” HotpotQA distractor validation protocol settings, fault states and C1â€“C4 checks; source-archive synthetic results; distinction between the planned QA verifier experiment and the simulation; three related benchmark links.
 
 ### Implementation and results
-- `implementations/github-repositories.md` — preserves the five curated external implementations and adds the source archive's student code/results inventory.
+- `implementations/github-repositories.md` â€” preserves the five curated external implementations and adds the source archive's student code/results inventory.
 - `implementations/results/final_comparison.csv`
 - `implementations/results/multi_seed_summary.csv`
 - `implementations/results/validation_report.json`
 - `implementations/results/environment_verification.json`
 - `implementations/results/gpu_verification.json`
 - `implementations/results/README.md`
-- `aitr-submission/evaluate_phaseiv.py`
-- `aitr-submission/ATR_PHASE_IV_completed_Prompts_12_14.ipynb`
+- `atr-submission/evaluate_phaseiv.py`
+- `atr-submission/ATR_PHASE_IV_completed_Prompts_12_14.ipynb`
 
 The compact CSV/JSON files above are transcribed from the ZIP. They are not a substitute for the complete raw CSVs, figures and logs.
 
 ### Paper
-- `paper/README.md` — inventories the ZIP's manuscript candidates and distinguishes the ACM CSUR survey version from the other manuscript drafts.
-- `aitr-submission/paper/main.tex` — Phase V IEEE-style draft source mirrored from the nested Phase5 package; provisional numerical results and author placeholders remain.
-- `aitr-submission/paper/references.bib` — intentionally incomplete placeholder from the Phase V package, not a submission-ready bibliography.
-- `aitr-submission/paper/README.md` — manuscript verification and build instructions.
+- `paper/README.md` â€” inventories the ZIP's manuscript candidates and distinguishes the ACM CSUR survey version from the other manuscript drafts.
+- `atr-submission/paper/main.tex` â€” Phase V IEEE-style draft source mirrored from the nested Phase5 package; provisional numerical results and author placeholders remain.
+- `atr-submission/paper/references.bib` â€” intentionally incomplete placeholder from the Phase V package, not a submission-ready bibliography.
+- `atr-submission/paper/README.md` â€” manuscript verification and build instructions.
 - Existing `paper/RESEARCH_paper.pdf` was in the repo before this update and has **not** been replaced by a newer ZIP PDF; a local binary Git push is still required.
 
 ### References
-- `references/references.md` — original 20-paper curated list retained, with the AITR reference audit appendix.
-- `references/references.bib` — corrected bibliography in the references category.
-- `aitr-submission/references.bib` — matching bibliography source for the AITR materials.
+- `references/references.md` â€” original 20-paper curated list retained, with the AITR reference audit appendix.
+- `references/references.bib` â€” corrected bibliography in the references category.
+- `atr-submission/references.bib` â€” matching bibliography source for the AITR materials.
 
 ### Tools
-- `tools/tools.md` — five engineering frameworks retained and four literature-discovery tools added with ratings and observations copied from the workbook.
+- `tools/tools.md` â€” five engineering frameworks retained and four literature-discovery tools added with ratings and observations copied from the workbook.
 
 ### Submission notes
-- `aitr-submission/README.md`
-- `aitr-submission/ARCHIVE_MANIFEST.md`
-- `aitr-submission/docs/REPRODUCIBILITY_AUDIT.md`
-- `aitr-submission/docs/LOCAL_SYNC_AND_UPLOAD.md`
+- `atr-submission/README.md`
+- `atr-submission/ARCHIVE_MANIFEST.md`
+- `atr-submission/docs/REPRODUCIBILITY_AUDIT.md`
+- `atr-submission/docs/LOCAL_SYNC_AND_UPLOAD.md`
 
 ## Source ZIP files still awaiting binary/local Git upload
 
@@ -83,3 +83,4 @@ The full source files remain available in the supplied FINAL ATR ZIP. The new Ma
 ## Integrity and license note
 
 Before public upload, confirm permission to redistribute manuscripts, screenshots, figures, datasets, and nested archives. No license file has been added because rights have not been fully audited. Keep experimental claims bounded by the source data, metric definitions, and actual reproduction status.
+

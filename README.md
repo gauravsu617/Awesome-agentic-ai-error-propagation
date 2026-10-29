@@ -1,4 +1,4 @@
-# Awesome Agentic AI Error Propagation
+﻿# Awesome Agentic AI Error Propagation
 
 A curated collection of research papers, datasets, tools, GitHub implementations, and learning resources related to error propagation in multi-step agentic AI workflows for research automation.
 
@@ -28,7 +28,7 @@ Agentic artificial intelligence systems perform complex tasks through sequences 
 
 However, the reliability of a multi-step workflow depends on the correctness of intermediate outputs. An error introduced during an early stage can become an input to later stages and propagate through the workflow. A research workflow can therefore be represented as:
 
-**Research Question → Planning → Literature Search → Source Selection → Evidence Extraction → Analysis → Synthesis → Verification → Report Generation**
+**Research Question â†’ Planning â†’ Literature Search â†’ Source Selection â†’ Evidence Extraction â†’ Analysis â†’ Synthesis â†’ Verification â†’ Report Generation**
 
 Major error sources include planning errors, information-retrieval failures, source-selection errors, evidence-extraction errors, reasoning errors, citation errors, tool-use errors, and memory errors. Errors can propagate through sequential dependencies, amplification, masking, correlated errors, and feedback loops.
 
@@ -44,13 +44,13 @@ This research paper examines how errors can enter different stages of an agentic
 
 ### Main Workflow
 
-**Research Question → Planning → Literature Search → Source Selection → Evidence Extraction → Analysis → Synthesis → Verification → Report Generation**
+**Research Question â†’ Planning â†’ Literature Search â†’ Source Selection â†’ Evidence Extraction â†’ Analysis â†’ Synthesis â†’ Verification â†’ Report Generation**
 
 ## Citation Integrity Audit
 
 The citation-integrity audit checks whether references and claims in the AI-assisted research paper are reliable. The audit considers bibliographic metadata, source existence, identifiers, and whether cited evidence supports the associated claim.
 
-**Audit checklist:** [Citation Integrity Audit Checklist](aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md)  
+**Audit checklist:** [Citation Integrity Audit Checklist](atr-submission/docs/CITATION_INTEGRITY_AUDIT.md)  
 **Latest citation review:** [Citation Verification Audit](citation/Citation_Verification_Audit.md), summarising the 22 original references, seven new candidates, recorded statuses, and manuscript corrections from the supplied workbook. The raw XLSX is still in the local ZIP; its former GitHub file was a one-byte placeholder, so it was removed.
 
 ## Curated Research Papers
@@ -59,70 +59,70 @@ The overview below retains 20 papers selected for background relevance to agenti
 
 ### Agent Reasoning and Reflection
 
-1. **ReAct: Synergizing Reasoning and Acting in Language Models** — Shunyu Yao et al. (2023), ICLR. Combines reasoning traces with actions and external information, forming a foundation for multi-step agent workflows.  
+1. **ReAct: Synergizing Reasoning and Acting in Language Models** â€” Shunyu Yao et al. (2023), ICLR. Combines reasoning traces with actions and external information, forming a foundation for multi-step agent workflows.  
    [Paper](https://arxiv.org/abs/2210.03629)
 
-2. **Reflexion: Language Agents with Verbal Reinforcement Learning** — Noah Shinn et al. (2023), arXiv. Uses verbal feedback and memory to support iterative self-correction in agents.  
+2. **Reflexion: Language Agents with Verbal Reinforcement Learning** â€” Noah Shinn et al. (2023), arXiv. Uses verbal feedback and memory to support iterative self-correction in agents.  
    [Paper](https://arxiv.org/abs/2303.11366)
 
-3. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models** — Shunyu Yao et al. (2023), NeurIPS. Explores structured search over multiple reasoning paths for difficult tasks.  
+3. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models** â€” Shunyu Yao et al. (2023), NeurIPS. Explores structured search over multiple reasoning paths for difficult tasks.  
    [Paper](https://arxiv.org/abs/2305.10601)
 
-4. **Generative Agents: Interactive Simulacra of Human Behavior** — Joon Sung Park et al. (2023), UIST. Introduces agents combining memory, reflection, and planning.  
+4. **Generative Agents: Interactive Simulacra of Human Behavior** â€” Joon Sung Park et al. (2023), UIST. Introduces agents combining memory, reflection, and planning.  
    [Paper](https://arxiv.org/abs/2304.03442)
 
-5. **Voyager: An Open-Ended Embodied Agent with Large Language Models** — Guanzhi Wang et al. (2023), arXiv. Combines automatic curriculum, a skill library, and iterative feedback for an open-ended agent.  
+5. **Voyager: An Open-Ended Embodied Agent with Large Language Models** â€” Guanzhi Wang et al. (2023), arXiv. Combines automatic curriculum, a skill library, and iterative feedback for an open-ended agent.  
    [Paper](https://arxiv.org/abs/2305.16291)
 
 ### Tool Use and Multi-Agent Systems
 
-6. **Toolformer: Language Models Can Teach Themselves to Use Tools** — Timo Schick et al. (2023), arXiv. Studies how language models can learn to call external tools and APIs.  
+6. **Toolformer: Language Models Can Teach Themselves to Use Tools** â€” Timo Schick et al. (2023), arXiv. Studies how language models can learn to call external tools and APIs.  
    [Paper](https://arxiv.org/abs/2302.04761)
 
-7. **ToolLLM: Facilitating Large Language Models to Master 16,000+ Real-World APIs** — Yujia Qin et al. (2023), arXiv. Provides large-scale research on API/tool use and tool-selection reasoning.  
+7. **ToolLLM: Facilitating Large Language Models to Master 16,000+ Real-World APIs** â€” Yujia Qin et al. (2023), arXiv. Provides large-scale research on API/tool use and tool-selection reasoning.  
    [Paper](https://arxiv.org/abs/2307.16789)
 
-8. **AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation** — Qingyun Wu et al. (2023), arXiv. Provides a framework for applications involving multiple interacting agents, tools, and humans.  
+8. **AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation** â€” Qingyun Wu et al. (2023), arXiv. Provides a framework for applications involving multiple interacting agents, tools, and humans.  
    [Paper](https://arxiv.org/abs/2308.08155)
 
-9. **MetaGPT: Meta Programming for Multi-Agent Collaborative Framework** — Sirui Hong et al. (2023), arXiv. Organizes multiple agents around structured software-development workflows and roles.  
+9. **MetaGPT: Meta Programming for Multi-Agent Collaborative Framework** â€” Sirui Hong et al. (2023), arXiv. Organizes multiple agents around structured software-development workflows and roles.  
    [Paper](https://arxiv.org/abs/2308.00352)
 
-10. **HuggingGPT: Solving AI Tasks with ChatGPT and Its Friends in Hugging Face** — Yongliang Shen et al. (2023), NeurIPS. Uses an LLM as a controller to plan tasks, select models, execute subtasks, and summarize results.  
+10. **HuggingGPT: Solving AI Tasks with ChatGPT and Its Friends in Hugging Face** â€” Yongliang Shen et al. (2023), NeurIPS. Uses an LLM as a controller to plan tasks, select models, execute subtasks, and summarize results.  
     [Paper](https://arxiv.org/abs/2303.17580)
 
 ### Retrieval and Grounding
 
-11. **Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks** — Patrick Lewis et al. (2020), NeurIPS. Introduces retrieval-augmented generation for combining language models with external knowledge.  
+11. **Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks** â€” Patrick Lewis et al. (2020), NeurIPS. Introduces retrieval-augmented generation for combining language models with external knowledge.  
     [Paper](https://arxiv.org/abs/2005.11401)
 
-12. **Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection** — Akari Asai et al. (2024), ICLR. Combines retrieval, generation, and self-critique to improve factuality and quality.  
+12. **Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection** â€” Akari Asai et al. (2024), ICLR. Combines retrieval, generation, and self-critique to improve factuality and quality.  
     [Paper](https://arxiv.org/abs/2310.11511)
 
-13. **WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents** — Shunyu Yao et al. (2022), NeurIPS. Provides an interactive web environment for grounded language-agent evaluation.  
+13. **WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents** â€” Shunyu Yao et al. (2022), NeurIPS. Provides an interactive web environment for grounded language-agent evaluation.  
     [Paper](https://arxiv.org/abs/2207.01206)
 
-14. **Mind2Web: Towards a Generalist Agent for the Web** — Xiang Deng et al. (2023), NeurIPS. Introduces a benchmark and dataset for generalist web agents operating on real websites.  
+14. **Mind2Web: Towards a Generalist Agent for the Web** â€” Xiang Deng et al. (2023), NeurIPS. Introduces a benchmark and dataset for generalist web agents operating on real websites.  
     [Paper](https://arxiv.org/abs/2306.06070)
 
-15. **ReSpAct: Harmonizing Reasoning, Speaking, and Acting Towards Building Large Language Model-Based Conversational AI Agents** — Vivek Dongre et al. (2024), arXiv. Studies coordination between reasoning, communication, and action in conversational agents.  
+15. **ReSpAct: Harmonizing Reasoning, Speaking, and Acting Towards Building Large Language Model-Based Conversational AI Agents** â€” Vivek Dongre et al. (2024), arXiv. Studies coordination between reasoning, communication, and action in conversational agents.  
     [Paper](https://arxiv.org/abs/2411.00927)
 
 ### Evaluation and Reliability
 
-16. **AgentBench: Evaluating LLMs as Agents** — Xiao Liu et al. (2023), arXiv / ICLR 2024. Evaluates LLM agents across multiple interactive environments and long-term tasks.  
+16. **AgentBench: Evaluating LLMs as Agents** â€” Xiao Liu et al. (2023), arXiv / ICLR 2024. Evaluates LLM agents across multiple interactive environments and long-term tasks.  
     [Paper](https://arxiv.org/abs/2308.03688)
 
-17. **WebArena: A Realistic Web Environment for Building Autonomous Agents** — Shuyan Zhou et al. (2023), arXiv / ICLR 2024. Provides a realistic, reproducible environment for evaluating long-horizon web agents.  
+17. **WebArena: A Realistic Web Environment for Building Autonomous Agents** â€” Shuyan Zhou et al. (2023), arXiv / ICLR 2024. Provides a realistic, reproducible environment for evaluating long-horizon web agents.  
     [Paper](https://arxiv.org/abs/2307.13854)
 
-18. **GAIA: A Benchmark for General AI Assistants** — Grégoire Mialon et al. (2023), arXiv. Evaluates general AI assistants on questions requiring reasoning, browsing, and tool use.  
+18. **GAIA: A Benchmark for General AI Assistants** â€” GrÃ©goire Mialon et al. (2023), arXiv. Evaluates general AI assistants on questions requiring reasoning, browsing, and tool use.  
     [Paper](https://arxiv.org/abs/2311.12983)
 
-19. **SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering** — John Yang et al. (2024), NeurIPS. Studies how agent-computer interfaces affect autonomous multi-step task performance.  
+19. **SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering** â€” John Yang et al. (2024), NeurIPS. Studies how agent-computer interfaces affect autonomous multi-step task performance.  
     [Paper](https://arxiv.org/abs/2405.15793)
 
-20. **AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents** — Edoardo Debenedetti et al. (2024), arXiv. Evaluates agent reliability and robustness when agents interact with tools and untrusted data.  
+20. **AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents** â€” Edoardo Debenedetti et al. (2024), arXiv. Evaluates agent reliability and robustness when agents interact with tools and untrusted data.  
     [Paper](https://arxiv.org/abs/2406.13352)
 
 ## Datasets and Benchmarks
@@ -183,7 +183,7 @@ A framework for programming and optimizing language-model pipelines and modular 
 
 ## GitHub Implementations
 
-Five external reference implementations remain in the curated list. The student's code notebooks, evaluator, and provided result summaries are catalogued in [GitHub Implementations and Local Research Code](implementations/github-repositories.md). Some original binaries from the ZIP are still awaiting upload; see [the archive manifest](aitr-submission/ARCHIVE_MANIFEST.md).
+Five external reference implementations remain in the curated list. The student's code notebooks, evaluator, and provided result summaries are catalogued in [GitHub Implementations and Local Research Code](implementations/github-repositories.md). Some original binaries from the ZIP are still awaiting upload; see [the archive manifest](atr-submission/ARCHIVE_MANIFEST.md).
 
 ### 1. AgentBench
 
@@ -292,7 +292,7 @@ Systems should identify where an error originated and determine which downstream
 
 **Error lineage:**
 
-**Initial Error → Affected Intermediate Results → Affected Claims → Affected Conclusions**
+**Initial Error â†’ Affected Intermediate Results â†’ Affected Claims â†’ Affected Conclusions**
 
 ### 3. Independent Multi-Agent Verification
 
@@ -302,7 +302,7 @@ Independent verification can use separate prompts, separate evidence retrieval, 
 
 A reliable research workflow should move toward:
 
-**Retrieve → Verify → Extract Evidence → Construct Claim → Cite**
+**Retrieve â†’ Verify â†’ Extract Evidence â†’ Construct Claim â†’ Cite**
 
 ### 5. Uncertainty-Aware Research Agents
 
@@ -322,7 +322,7 @@ Controlled autonomy may be more reliable than unrestricted autonomy, with AI han
 
 A central concept of this repository is the propagation of errors through dependent workflow stages:
 
-**Wrong Source → Wrong Summary → Wrong Synthesis → Unsupported Conclusion**
+**Wrong Source â†’ Wrong Summary â†’ Wrong Synthesis â†’ Unsupported Conclusion**
 
 An error that begins as a retrieval or source-selection problem can become a research-level claim after passing through summarization, synthesis, citation, and report generation.
 
@@ -333,13 +333,13 @@ A final report may contain genuine sources and fluent academic writing while sti
 
 The repository includes a selected AITR source-and-audit subset for **Error Propagation in Multi-Step Agentic AI Workflows for Research Automation**. It is not a complete mirror of the supplied FINAL ATR archive, and the planned manuscript-PDF replacement is not complete. See the archive manifest for the distinction between files present in GitHub and files still only in the original package.
 
-- [Open the AITR submission package](aitr-submission/README.md)
-- [FINAL ATR archive manifest and mirror status](aitr-submission/ARCHIVE_MANIFEST.md)
-- [Reproducibility and evidence audit](aitr-submission/docs/REPRODUCIBILITY_AUDIT.md)
-- [Citation integrity audit checklist](aitr-submission/docs/CITATION_INTEGRITY_AUDIT.md)
-- [Instructions to sync remaining archive files](aitr-submission/docs/LOCAL_SYNC_AND_UPLOAD.md)
+- [Open the AITR submission package](atr-submission/README.md)
+- [FINAL ATR archive manifest and mirror status](atr-submission/ARCHIVE_MANIFEST.md)
+- [Reproducibility and evidence audit](atr-submission/docs/REPRODUCIBILITY_AUDIT.md)
+- [Citation integrity audit checklist](atr-submission/docs/CITATION_INTEGRITY_AUDIT.md)
+- [Instructions to sync remaining archive files](atr-submission/docs/LOCAL_SYNC_AND_UPLOAD.md)
 
-The research package distinguishes existing artifacts from experiments that still require execution or verification. Do not interpret the presence of a notebook, result archive, or manuscript as proof that all experiments were executed successfully. Results should be reported only after running the documented workflow and preserving logs. The ZIP-derived Phase IV–VI reports and checklists are now linked from the [AITR documentation index](aitr-submission/docs/ZIP_ARCHIVE_INVENTORY.md); original binary artifacts are still being mirrored selectively.
+The research package distinguishes existing artifacts from experiments that still require execution or verification. Do not interpret the presence of a notebook, result archive, or manuscript as proof that all experiments were executed successfully. Results should be reported only after running the documented workflow and preserving logs. The ZIP-derived Phase IVâ€“VI reports and checklists are now linked from the [AITR documentation index](atr-submission/docs/ZIP_ARCHIVE_INVENTORY.md); original binary artifacts are still being mirrored selectively.
 
 ## License
 
@@ -351,44 +351,44 @@ Third-party research papers and copyrighted materials should not be uploaded unl
 
 ```text
 awesome-agentic-ai-error-propagation/
-├── README.md
-├── citation/
-│   └── Citation_Verification_Audit.md
-├── datasets/
-│   └── datasets.md
-├── implementations/
-│   ├── github-repositories.md
-│   └── results/
-│       ├── final_comparison.csv
-│       ├── multi_seed_summary.csv
-│       ├── validation_report.json
-│       ├── environment_verification.json
-│       └── gpu_verification.json
-├── paper/
-│   ├── RESEARCH_paper.pdf
-│   └── README.md
-├── references/
-│   ├── references.md
-│   └── references.bib
-├── tools/
-│   └── tools.md
-└── aitr-submission/
-    ├── ARCHIVE_MANIFEST.md
-    ├── README.md
-    ├── references.bib
-    ├── ATR_PHASE_IV_completed_Prompts_12_14.ipynb
-    ├── evaluate_phaseiv.py
-    └── docs/
-        ├── CITATION_INTEGRITY_AUDIT.md
-        ├── LOCAL_SYNC_AND_UPLOAD.md
-        └── REPRODUCIBILITY_AUDIT.md
+â”œâ”€â”€ README.md
+â”œâ”€â”€ citation/
+â”‚   â””â”€â”€ Citation_Verification_Audit.md
+â”œâ”€â”€ datasets/
+â”‚   â””â”€â”€ datasets.md
+â”œâ”€â”€ implementations/
+â”‚   â”œâ”€â”€ github-repositories.md
+â”‚   â””â”€â”€ results/
+â”‚       â”œâ”€â”€ final_comparison.csv
+â”‚       â”œâ”€â”€ multi_seed_summary.csv
+â”‚       â”œâ”€â”€ validation_report.json
+â”‚       â”œâ”€â”€ environment_verification.json
+â”‚       â””â”€â”€ gpu_verification.json
+â”œâ”€â”€ paper/
+â”‚   â”œâ”€â”€ RESEARCH_paper.pdf
+â”‚   â””â”€â”€ README.md
+â”œâ”€â”€ references/
+â”‚   â”œâ”€â”€ references.md
+â”‚   â””â”€â”€ references.bib
+â”œâ”€â”€ tools/
+â”‚   â””â”€â”€ tools.md
+â””â”€â”€ atr-submission/
+    â”œâ”€â”€ ARCHIVE_MANIFEST.md
+    â”œâ”€â”€ README.md
+    â”œâ”€â”€ references.bib
+    â”œâ”€â”€ ATR_PHASE_IV_completed_Prompts_12_14.ipynb
+    â”œâ”€â”€ evaluate_phaseiv.py
+    â””â”€â”€ docs/
+        â”œâ”€â”€ CITATION_INTEGRITY_AUDIT.md
+        â”œâ”€â”€ LOCAL_SYNC_AND_UPLOAD.md
+        â””â”€â”€ REPRODUCIBILITY_AUDIT.md
 ```
 
 ## Submission Checklist
 
 - [x] Repository title and description
 - [x] Clickable Table of Contents
-- [x] 150–300 word topic overview
+- [x] 150â€“300 word topic overview
 - [x] AI-assisted research paper section
 - [x] Citation-integrity audit section
 - [x] Exactly 20 distinct scholarly papers
@@ -405,3 +405,4 @@ awesome-agentic-ai-error-propagation/
 - [ ] Ensure no unauthorized copyrighted PDFs are uploaded
 - [ ] Make at least 5 meaningful Git commits
 - [ ] Keep repository public
+

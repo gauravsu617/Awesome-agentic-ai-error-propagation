@@ -1,4 +1,4 @@
-# Sync all remaining FINAL ATR files into their repository categories
+﻿# Sync all remaining FINAL ATR files into their repository categories
 
 The repository now contains updated category documentation, the citation status summary, corrected BibTeX, and compact result/log summaries. The remaining PDFs, images, XLSX workbooks, Phase III notebook files, and raw CSVs need a local Git push because the connected GitHub file-writing route used for this update accepts UTF-8 text but not raw binary file bytes.
 
@@ -28,7 +28,7 @@ mkdir -p implementations/source-phase-packages
 mkdir -p paper/archive-candidates paper/latex-source paper/archive-figures paper/revision-evidence
 mkdir -p references/source-exports references/source-bibliography references/literature-evidence
 mkdir -p tools/source-workbooks
-mkdir -p aitr-submission/phase-vi
+mkdir -p atr-submission/phase-vi
 
 # Citation workbook and maps
 cp "$SRC/Part_A_Citation_Verification.xlsx" citation/source-workbooks/
@@ -53,7 +53,7 @@ unzip -oq "$SRC/agentic_error_propagation_results - Copy.zip" -d implementations
 cp "$SRC/Phase4.zip" "$SRC/Phase5.zip" "$SRC/Phase_VI_Complete_Package.zip" implementations/source-phase-packages/
 unzip -oq "$SRC/Phase4.zip" -d implementations/source-phase-packages/phase4/
 unzip -oq "$SRC/Phase5.zip" -d implementations/source-phase-packages/phase5/
-unzip -oq "$SRC/Phase_VI_Complete_Package.zip" -d aitr-submission/phase-vi/
+unzip -oq "$SRC/Phase_VI_Complete_Package.zip" -d atr-submission/phase-vi/
 
 # Manuscript candidates, source, and figures
 cp "$SRC/ACM_CSUR_Review_Paper_Final.pdf" "$SRC/agentic_ai_error_propagation_research_paper.pdf" \
@@ -96,7 +96,7 @@ git add citation/source-workbooks citation/source-maps datasets/source-protocols
   implementations/source-notebooks implementations/source-results implementations/source-phase-packages \
   paper/archive-candidates paper/latex-source paper/archive-figures paper/revision-evidence \
   references/source-exports references/source-bibliography references/literature-evidence references/references.bib tools/source-workbooks \
-  aitr-submission/phase-vi
+  atr-submission/phase-vi
 
 git commit -m "Add FINAL ATR source artifacts to research categories"
 git push origin main
@@ -123,3 +123,4 @@ chmod +x apply_research_paper_replacement.sh
 ```
 
 The script checks the PDF SHA-256, updates the paper-status text in `README.md` and `paper/README.md`, commits those changes with the PDF replacement, and pushes to `origin main`. It does not force-push. Review `git status` first if you have unrelated local changes.
+

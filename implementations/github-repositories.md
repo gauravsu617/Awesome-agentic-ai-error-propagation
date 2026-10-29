@@ -1,4 +1,4 @@
-# GitHub Implementations and Local Research Code
+﻿# GitHub Implementations and Local Research Code
 
 This page distinguishes five maintained external reference implementations from the student's experiment code bundled in FINAL ATR. The source archive files have not all been uploaded to this repository as binaries; the archive manifest lists files that still need syncing.
 
@@ -35,8 +35,8 @@ Evaluation environment for prompt-injection attacks and defenses in tool-using L
 |---|---|---|
 | `ATR_PHASE_III_CODE.ipynb` | Phase III implementation notebook (248,304 bytes in source ZIP) | Not yet mirrored as a separate file |
 | `ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb` | Completed Phase III notebook (242,410 bytes) | Not yet mirrored as a separate file |
-| `ATR_PHASE_IV_completed_Prompts_12_14.ipynb` | Phase IV evaluation notebook | Mirrored as `aitr-submission/ATR_PHASE_IV_completed_Prompts_12_14.ipynb` |
-| `evaluate_phaseiv.py` | CSV validation, summaries, comparison table, and plots | Mirrored as `aitr-submission/evaluate_phaseiv.py` |
+| `ATR_PHASE_IV_completed_Prompts_12_14.ipynb` | Phase IV evaluation notebook | Mirrored as `atr-submission/ATR_PHASE_IV_completed_Prompts_12_14.ipynb` |
+| `evaluate_phaseiv.py` | CSV validation, summaries, comparison table, and plots | Mirrored as `atr-submission/evaluate_phaseiv.py` |
 | `agentic_error_propagation_results - Copy.zip` | Raw simulation CSVs, summary CSVs, figures, and validation/environment logs | Selected summary tables and report are mirrored below; full archive is not yet mirrored |
 | `Phase4.zip` | Phase IV report, DOCX, evaluator, notebook | Not mirrored as binary archive |
 | `Phase5.zip` | Peer-review/revision package and manuscript source | Not mirrored as binary archive |
@@ -46,7 +46,7 @@ Evaluation environment for prompt-injection attacks and defenses in tool-using L
 
 The results ZIP reports 400 rows in baseline results, 800 in propagation results, and 24,000 in multi-seed results. The summary table below comes from its `predictions/final_comparison.csv`:
 
-| Base error rate | Mean errors: independent | Mean errors: propagation | Delta (propagation − independent) | Failure rate: independent | Failure rate: propagation |
+| Base error rate | Mean errors: independent | Mean errors: propagation | Delta (propagation âˆ’ independent) | Failure rate: independent | Failure rate: propagation |
 |---:|---:|---:|---:|---:|---:|
 | 0.0 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
 | 0.1 | 0.3847 | 0.4917 | 0.1070 | 0.3360 | 0.3360 |
@@ -68,7 +68,7 @@ From this repository root:
 
 ```bash
 python -m pip install pandas numpy matplotlib
-python aitr-submission/evaluate_phaseiv.py \
+python atr-submission/evaluate_phaseiv.py \
   --input path/to/multi_seed_results.csv \
   --outdir results/phase_iv
 ```
@@ -81,4 +81,5 @@ The evaluator expects `error_rate`, `model`, `stage_errors`, and `workflow_faile
 - Keep raw inputs/logs separate from computed summaries and figures.
 - Inspect data-generating code to establish whether the simulation matches the intended research question.
 - Treat `PASS` values in supplied JSON as source-archive logs until independently reproduced.
-- See [reproducibility audit](../aitr-submission/docs/REPRODUCIBILITY_AUDIT.md) and [archive manifest](../aitr-submission/ARCHIVE_MANIFEST.md).
+- See [reproducibility audit](../atr-submission/docs/REPRODUCIBILITY_AUDIT.md) and [archive manifest](../atr-submission/ARCHIVE_MANIFEST.md).
+

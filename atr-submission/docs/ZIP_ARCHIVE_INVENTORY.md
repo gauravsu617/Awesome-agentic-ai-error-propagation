@@ -1,4 +1,4 @@
-# Uploaded ZIP Inventory and Repository Reconciliation
+﻿# Uploaded ZIP Inventory and Repository Reconciliation
 
 **Archive inspected:** `FINAL ATR(1).zip`  
 **Purpose:** Record the source artifacts available for completing the repository without claiming unverified work as complete.
@@ -20,7 +20,7 @@
 | Figures | `Figures/fig1_workflow.png` through `fig4_taxonomy.png` | Confirm that captions and manuscript references match the selected paper version. |
 
 ## Repository mapping guidance
-- Phase reports, checklists, and integrity documents belong under `aitr-submission/docs/`.
+- Phase reports, checklists, and integrity documents belong under `atr-submission/docs/`.
 - Notebooks, evaluator scripts, raw results, and generated figures should be kept in clearly named subdirectories with provenance and run instructions.
 - Canonical manuscript source and its bibliography should live together under `paper/`.
 - Citation assignment artifacts should be kept separate from the paper's research bibliography to avoid confusing coursework deliverables with manuscript references.
@@ -31,3 +31,4 @@ The uploaded archive contains a mixture of draft papers, assignment deliverables
 
 ## Status
 This inventory is based on the uploaded archive listing. It does not certify the files' scientific correctness, execution status, or publication readiness.
+

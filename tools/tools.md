@@ -1,4 +1,4 @@
-# Tools and Libraries
+﻿# Tools and Libraries
 
 This page retains the five curated engineering frameworks and adds the four literature-discovery tools evaluated in the supplied FINAL ATR workbook. These are separate categories: frameworks help implement agent workflows; discovery tools help locate and synthesize research literature.
 
@@ -33,7 +33,7 @@ This page retains the five curated engineering frameworks and adds the four lite
 
 Ratings below reproduce the values in `Lab4_Literature_List_and_Tool_Tables.xlsx`. They are the workbook author's recorded ratings, not an independent universal benchmark.
 
-| Criterion (1–5) | ResearchRabbit | Litmaps | Semantic Scholar | Elicit |
+| Criterion (1â€“5) | ResearchRabbit | Litmaps | Semantic Scholar | Elicit |
 |---|---:|---:|---:|---:|
 | Ease of use | 4 | 4 | 5 | 4 |
 | Relevance of discovered literature | 2 | 2 | 4 | 5 |
@@ -56,13 +56,14 @@ Links:
 
 ### How the supplied workbook says the tools were used
 
-- **ResearchRabbit:** a seed collection of two papers and a “Similar articles” map; approximately 20 nodes, mostly labelled 2025–2026. No new paper was added from the map because relevance was not confirmed.
-- **Litmaps:** a citation timeline around one 2026 seed; approximately 12 labelled nodes spanning 2020–2026. Used for orientation, not as standalone evidence.
+- **ResearchRabbit:** a seed collection of two papers and a â€œSimilar articlesâ€ map; approximately 20 nodes, mostly labelled 2025â€“2026. No new paper was added from the map because relevance was not confirmed.
+- **Litmaps:** a citation timeline around one 2026 seed; approximately 12 labelled nodes spanning 2020â€“2026. Used for orientation, not as standalone evidence.
 - **Semantic Scholar:** four targeted searches on multi-agent failure, automated failure attribution, propagation-aware uncertainty, and fault injection. The workbook says two papers were added and three held out pending verification.
 - **Elicit:** structured comparison query on where errors originate/propagate and how they are measured/mitigated. It surfaced two closely related 2025 papers, but the workbook warns that the report's coverage is narrow and figure claims need checking in the primary paper.
 
-Recorded prompts and queries are in [Prompts_and_Search_Queries.txt](../aitr-submission/Prompts_and_Search_Queries.txt). Citation status is summarized in [the citation verification audit](../citation/Citation_Verification_Audit.md).
+Recorded prompts and queries are in [Prompts_and_Search_Queries.txt](../atr-submission/Prompts_and_Search_Queries.txt). Citation status is summarized in [the citation verification audit](../citation/Citation_Verification_Audit.md).
 
 ## Tool selection guidance for this project
 
 Use Semantic Scholar and publisher/preprint records for source discovery and bibliographic checks; use Elicit for structured comparison only as a secondary aid; use ResearchRabbit and Litmaps for discovery maps. Claims should be verified in the primary paper, and AI/search summaries should not substitute for checking the cited evidence.
+

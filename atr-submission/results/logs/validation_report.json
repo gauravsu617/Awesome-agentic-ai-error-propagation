@@ -1,0 +1,69 @@
+{
+  "project": "Error Propagation in Multi-Step Agentic AI Workflows",
+  "checks": [
+    {
+      "file": "predictions/baseline_results.csv",
+      "rows": 400,
+      "columns": [
+        "trial",
+        "error_rate",
+        "stage_errors",
+        "workflow_failed"
+      ],
+      "missing_values": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "file": "predictions/propagation_results.csv",
+      "rows": 800,
+      "columns": [
+        "trial",
+        "error_rate",
+        "model",
+        "stage_errors",
+        "workflow_failed"
+      ],
+      "missing_values": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "file": "predictions/multi_seed_results.csv",
+      "rows": 24000,
+      "columns": [
+        "trial",
+        "error_rate",
+        "model",
+        "stage_errors",
+        "workflow_failed",
+        "seed"
+      ],
+      "missing_values": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "file": "predictions/multi_seed_summary.csv",
+      "rows": 8,
+      "columns": [
+        "error_rate",
+        "model",
+        "mean_stage_errors",
+        "std_stage_errors",
+        "failure_rate",
+        "ci95_half_width"
+      ],
+      "missing_values": 0,
+      "duplicate_rows": 0
+    }
+  ],
+  "files": {
+    "predictions/baseline_results.csv": "FOUND",
+    "predictions/propagation_results.csv": "FOUND",
+    "predictions/multi_seed_results.csv": "FOUND",
+    "predictions/multi_seed_summary.csv": "FOUND",
+    "figures/error_propagation_comparison.png": "FOUND",
+    "logs/environment_verification.json": "FOUND",
+    "logs/gpu_verification.json": "FOUND",
+    "logs/environment_console.txt": "FOUND"
+  },
+  "status": "PASS"
+}
