@@ -1,40 +1,67 @@
-# Finish syncing the complete FINAL ATR package
+# Sync all remaining FINAL ATR files into their repository categories
 
-The GitHub AITR directory currently contains selected source-and-audit files. The prepared archive includes additional PDFs, spreadsheets, figures, RIS exports, notebooks, LaTeX sources, and nested phase ZIPs that were not all transferred through the current file-writing path.
+The repository now contains updated category documentation, citation-audit findings, and compact result summaries. Some original binaries and raw source files still need a local Git push because the file-writing route used for this update accepts UTF-8 text, not raw PDF/image/XLSX bytes.
 
-To mirror the full archive without overwriting the repository's existing curated README or current audit files, place the archive contents in a separate folder named aitr-submission/original-archive.
+## 1. Download and unpack
 
-## Ubuntu / Linux
+Download the GitHub-ready ZIP from the conversation, then in Ubuntu/Linux:
 
-1. Download the prepared FINAL ATR GitHub-ready ZIP from the conversation and note its local path.
-2. Clone the repository:
-   
-   ```bash
-   git clone https://github.com/gauravsu617/Awesome-agentic-ai-error-propagation.git
-   cd Awesome-agentic-ai-error-propagation
-   ```
+```bash
+git clone https://github.com/gauravsu617/Awesome-agentic-ai-error-propagation.git
+cd Awesome-agentic-ai-error-propagation
+mkdir -p /tmp/final-atr-new
+unzip /path/to/final-atr-research-github-ready.zip -d /tmp/final-atr-new
+SRC="/tmp/final-atr-new/FINAL ATR"
+```
 
-3. Extract the ZIP to a temporary directory. Replace /path/to/final-atr-research-github-ready.zip with the ZIP's actual path:
-   
-   ```bash
-   mkdir -p /tmp/final-atr-upload
-   unzip /path/to/final-atr-research-github-ready.zip -d /tmp/final-atr-upload
-   mkdir -p aitr-submission/original-archive
-   rsync -av --exclude='.git' "/tmp/final-atr-upload/FINAL ATR/" aitr-submission/original-archive/
-   ```
+Replace `/path/to/final-atr-research-github-ready.zip` with the actual downloaded ZIP path.
 
-4. Review the staged files and confirm redistribution rights before pushing:
-   
-   ```bash
-   git status --short
-   git add aitr-submission/original-archive
-   git diff --cached --stat
-   git commit -m "Add remaining FINAL ATR archive artifacts"
-   git push origin main
-   ```
+## 2. Copy current archive assets into category subfolders
 
-Do not force-push. If the remote branch advances before your push, fetch and reconcile the history first.
+This preserves the repository's curated markdown while making the complete package easy to trace:
 
-## Before making the repository public
+```bash
+mkdir -p citation/source-workbooks citation/source-maps
+mkdir -p datasets/source-protocols
+mkdir -p implementations/source-notebooks implementations/source-results
+mkdir -p paper/archive-candidates paper/latex-source
+mkdir -p references/source-exports tools/source-workbooks
 
-Check the paper PDFs, screenshots, nested archives, and any datasets for redistribution permissions. Do not commit credentials, private records, or restricted datasets. Keep the reproduction audit status as UNKNOWN / TEST REQUIRED until the experiments have actually run on the documented inputs and the outputs have been inspected.
+cp "$SRC/Part_A_Citation_Verification.xlsx" citation/source-workbooks/
+cp "$SRC/Lab4_Literature_List_and_Tool_Tables.xlsx" tools/source-workbooks/
+cp "$SRC/Part_B_Collection_Export.ris" "$SRC/ResearchRabbit_Collection_Export.ris" references/source-exports/
+cp "$SRC/Part_B_Citation_Map_ResearchRabbit.png" "$SRC/Part_B_Citation_Map_Litmaps.png" citation/source-maps/
+cp "$SRC/AITR_Phase_II_Dataset_Sheet_and_Frozen_Protocol_MCL2026003.pdf" datasets/source-protocols/
+cp "$SRC/ATR_PHASE_III_CODE.ipynb" "$SRC/ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb" implementations/source-notebooks/
+cp "$SRC/agentic_error_propagation_results - Copy.zip" implementations/source-results/
+cp "$SRC/ACM_CSUR_Review_Paper_Final.pdf" "$SRC/agentic_ai_error_propagation_research_paper.pdf" "$SRC/Overleaf_Final_Paper.pdf" "$SRC/Prism_Final_Paper.pdf" paper/archive-candidates/
+cp "$SRC/main.tex" "$SRC/main_acmart_overleaf.tex" paper/latex-source/
+cp "$SRC/references.bib" references/
+```
+
+Add the remaining relevant review PDFs, Elicit reports, prompt-pack PDFs, figure images, and phase archives into subfolders as listed in [ARCHIVE_MANIFEST.md](../ARCHIVE_MANIFEST.md). Review redistribution rights before adding third-party content.
+
+## 3. Validate before committing
+
+```bash
+sha256sum "$SRC/Overleaf_Final_Paper.pdf" "$SRC/Prism_Final_Paper.pdf"
+unzip -t "$SRC/agentic_error_propagation_results - Copy.zip"
+git status --short
+git diff --stat
+```
+
+Confirm the citation XLSX opens as a workbook and do not overwrite the derived `citation/Citation_Verification_Audit.md` page with an invalid file. The source protocol's HotpotQA experiment and the supplied simulation results are different designs; do not merge their outcomes.
+
+## 4. Commit and push
+
+```bash
+git add citation/source-workbooks citation/source-maps datasets/source-protocols \
+  implementations/source-notebooks implementations/source-results \
+  paper/archive-candidates paper/latex-source references/source-exports references/references.bib \
+  tools/source-workbooks
+
+git commit -m "Add FINAL ATR source artifacts to research categories"
+git push origin main
+```
+
+Do not force-push. If the remote has advanced, fetch and reconcile before pushing.
