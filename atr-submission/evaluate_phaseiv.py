@@ -77,6 +77,10 @@ def main():
             "failure_rate_difference_prop_minus_ind": fails["propagation"] - fails["independent"],
         })
 
+        # Keep the comparison frame on a plain RangeIndex: error_rate is a
+        # column, and must not also remain an index level during merge.
+        comparison = comparison.reset_index(drop=True)
+
         # Use matched trials for uncertainty on the stage-error difference.
         # This is valid only when the input contains a usable pairing key.
         if {"seed", "trial", "error_rate"}.issubset(df.columns):
