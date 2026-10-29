@@ -1,10 +1,10 @@
 # Sync all remaining FINAL ATR files into their repository categories
 
-The repository now contains updated category documentation, citation-audit findings, and compact result summaries. Some original binaries and raw source files still need a local Git push because the file-writing route used for this update accepts UTF-8 text, not raw PDF/image/XLSX bytes.
+The repository now contains updated category documentation, the citation status summary, corrected BibTeX, and compact result/log summaries. The remaining PDFs, images, XLSX workbooks, Phase III notebook files, and raw CSVs need a local Git push because the connected GitHub file-writing route used for this update accepts UTF-8 text but not raw binary file bytes.
 
-## 1. Download and unpack
+## 1. Download, clone, and unpack
 
-Download the GitHub-ready ZIP from the conversation, then in Ubuntu/Linux:
+Download the GitHub-ready ZIP from the conversation. In Ubuntu/Linux:
 
 ```bash
 git clone https://github.com/gauravsu617/Awesome-agentic-ai-error-propagation.git
@@ -14,54 +14,98 @@ unzip /path/to/final-atr-research-github-ready.zip -d /tmp/final-atr-new
 SRC="/tmp/final-atr-new/FINAL ATR"
 ```
 
-Replace `/path/to/final-atr-research-github-ready.zip` with the actual downloaded ZIP path.
+Replace the ZIP path with its actual location. Ensure the extracted source directory is `FINAL ATR`.
 
-## 2. Copy current archive assets into category subfolders
+## 2. Sync the source artifacts into category folders
 
-This preserves the repository's curated markdown while making the complete package easy to trace:
+These commands retain the curated Markdown indexes and place originals in clearly named subdirectories.
 
 ```bash
 mkdir -p citation/source-workbooks citation/source-maps
-mkdir -p datasets/source-protocols
+mkdir -p datasets/source-protocols datasets/source-prompt-packs
 mkdir -p implementations/source-notebooks implementations/source-results
-mkdir -p paper/archive-candidates paper/latex-source
-mkdir -p references/source-exports tools/source-workbooks
+mkdir -p implementations/source-phase-packages
+mkdir -p paper/archive-candidates paper/latex-source paper/archive-figures paper/revision-evidence
+mkdir -p references/source-exports references/literature-evidence
+mkdir -p tools/source-workbooks
+mkdir -p aitr-submission/phase-vi
 
+# Citation workbook and maps
 cp "$SRC/Part_A_Citation_Verification.xlsx" citation/source-workbooks/
-cp "$SRC/Lab4_Literature_List_and_Tool_Tables.xlsx" tools/source-workbooks/
-cp "$SRC/Part_B_Collection_Export.ris" "$SRC/ResearchRabbit_Collection_Export.ris" references/source-exports/
 cp "$SRC/Part_B_Citation_Map_ResearchRabbit.png" "$SRC/Part_B_Citation_Map_Litmaps.png" citation/source-maps/
+
+# Dataset protocol and prompt packs
 cp "$SRC/AITR_Phase_II_Dataset_Sheet_and_Frozen_Protocol_MCL2026003.pdf" datasets/source-protocols/
+cp "$SRC/AITR_Prompts_01_02_MCL2026003.pdf" datasets/source-prompt-packs/
+cp "$SRC/AITR Prompts 03-05 Literature-to-Experiment Package (MCL2026003).pdf" datasets/source-prompt-packs/
+
+# Tool-rating workbook and experiment code
+cp "$SRC/Lab4_Literature_List_and_Tool_Tables.xlsx" tools/source-workbooks/
 cp "$SRC/ATR_PHASE_III_CODE.ipynb" "$SRC/ATR_PHASE_III_CODE_completed_Prompts_10_11.ipynb" implementations/source-notebooks/
-cp "$SRC/agentic_error_propagation_results - Copy.zip" implementations/source-results/
-cp "$SRC/ACM_CSUR_Review_Paper_Final.pdf" "$SRC/agentic_ai_error_propagation_research_paper.pdf" "$SRC/Overleaf_Final_Paper.pdf" "$SRC/Prism_Final_Paper.pdf" paper/archive-candidates/
+cp "$SRC/ATR_PHASE_IV_completed_Prompts_12_14.ipynb" implementations/source-notebooks/
+cp "$SRC/evaluate_phaseiv.py" implementations/source-notebooks/
+
+# Expand the raw result ZIP so CSVs, figures and logs are individual repository files
+mkdir -p implementations/source-results/agentic-error-propagation-results
+unzip -oq "$SRC/agentic_error_propagation_results - Copy.zip" -d implementations/source-results/agentic-error-propagation-results/
+
+# Phase deliverables (both archive and extracted material)
+cp "$SRC/Phase4.zip" "$SRC/Phase5.zip" "$SRC/Phase_VI_Complete_Package.zip" implementations/source-phase-packages/
+unzip -oq "$SRC/Phase4.zip" -d implementations/source-phase-packages/phase4/
+unzip -oq "$SRC/Phase5.zip" -d implementations/source-phase-packages/phase5/
+unzip -oq "$SRC/Phase_VI_Complete_Package.zip" -d aitr-submission/phase-vi/
+
+# Manuscript candidates, source, and figures
+cp "$SRC/ACM_CSUR_Review_Paper_Final.pdf" "$SRC/agentic_ai_error_propagation_research_paper.pdf" \
+   "$SRC/Overleaf_Final_Paper.pdf" "$SRC/Prism_Final_Paper.pdf" \
+   "$SRC/LiteratureReview_TopicID_MCL2026003_SutariyaGauravKarsanbhai.pdf" \
+   paper/archive-candidates/
 cp "$SRC/main.tex" "$SRC/main_acmart_overleaf.tex" paper/latex-source/
-cp "$SRC/references.bib" references/
+cp "$SRC"/Figures/*.png paper/archive-figures/
+cp "$SRC/Part_B_Reflection.pdf" paper/revision-evidence/
+cp "$SRC/Elicit_Report_Error_Propagation.pdf" "$SRC/Elicit - Error Propagation in Multi-Step AI-Agent Workflows.pdf" \
+   "$SRC/Elicit_Semantic_Scholar_Evidence_Filled.pdf" references/literature-evidence/
+
+# Bibliographic exports
+cp "$SRC/Part_B_Collection_Export.ris" "$SRC/ResearchRabbit_Collection_Export.ris" references/source-exports/
+cp "$SRC/references.bib" references/references.bib
 ```
 
-Add the remaining relevant review PDFs, Elicit reports, prompt-pack PDFs, figure images, and phase archives into subfolders as listed in [ARCHIVE_MANIFEST.md](../ARCHIVE_MANIFEST.md). Review redistribution rights before adding third-party content.
-
-## 3. Validate before committing
+## 3. Validate the source files before committing
 
 ```bash
 sha256sum "$SRC/Overleaf_Final_Paper.pdf" "$SRC/Prism_Final_Paper.pdf"
 unzip -t "$SRC/agentic_error_propagation_results - Copy.zip"
+python - <<'PY'
+import json
+from pathlib import Path
+p = Path("implementations/source-results/agentic-error-propagation-results/predictions/multi_seed_results.csv")
+assert p.exists(), f"Raw multi-seed CSV missing: {p}"
+print("multi_seed_results.csv bytes:", p.stat().st_size)
+PY
 git status --short
 git diff --stat
 ```
 
-Confirm the citation XLSX opens as a workbook and do not overwrite the derived `citation/Citation_Verification_Audit.md` page with an invalid file. The source protocol's HotpotQA experiment and the supplied simulation results are different designs; do not merge their outcomes.
+The original archive's validation JSON reports 24,000 rows in its multi-seed CSV, 800 propagation rows and 400 baseline rows. Treat those as reported checks until you independently inspect/re-run validation.
 
 ## 4. Commit and push
 
 ```bash
-git add citation/source-workbooks citation/source-maps datasets/source-protocols \
-  implementations/source-notebooks implementations/source-results \
-  paper/archive-candidates paper/latex-source references/source-exports references/references.bib \
-  tools/source-workbooks
+git add citation/source-workbooks citation/source-maps datasets/source-protocols datasets/source-prompt-packs \
+  implementations/source-notebooks implementations/source-results implementations/source-phase-packages \
+  paper/archive-candidates paper/latex-source paper/archive-figures paper/revision-evidence \
+  references/source-exports references/literature-evidence references/references.bib tools/source-workbooks \
+  aitr-submission/phase-vi
 
 git commit -m "Add FINAL ATR source artifacts to research categories"
 git push origin main
 ```
 
-Do not force-push. If the remote has advanced, fetch and reconcile before pushing.
+Do not force-push. If the remote advances, fetch and reconcile before pushing.
+
+## 5. Important interpretation and license notes
+
+- The HotpotQA verifier design in the Phase II PDF is a planned QA experiment; its freeze checklist still marks several items open.
+- The provided result CSVs describe a separate synthetic `independent` versus `propagation` simulation. Do not present them as HotpotQA verifier results or real-LLM recovery rates.
+- Verify rights before committing PDFs, screenshots, datasets, or nested archives. Do not add secrets or private data.
