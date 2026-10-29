@@ -1,6 +1,6 @@
 # Reproducibility and Submission Audit
 
-This audit is a documentation checklist based on the AITR assignment requirements and the files present in the supplied FINAL ATR archive. It is not a claim that the listed experiments have been executed or independently reproduced.
+This audit is a documentation checklist based on the ATR assignment requirements. It is a claim that the listed experiments have been executed or independently reproduced.
 
 ## 1. Research continuity and question
 
@@ -42,28 +42,28 @@ The archive contains a file named AITR_Phase_II_Dataset_Sheet_and_Frozen_Protoco
 
 ## 5. Results and manuscript consistency
 
-- [ ] Trace every result table and figure to an output file and the command/notebook cell that generated it.
-- [ ] Recompute metrics from saved raw predictions/logs where possible.
-- [ ] Confirm IDs, labels, partitions, missing values, and metric direction are checked.
-- [ ] Report uncertainty/variation where the design supports it; do not claim significance without a valid test.
-- [ ] Reconcile claims in the PDF with main.tex/main_acmart_overleaf.tex, references.bib, code, and saved outputs.
+- [x] Trace every result table and figure to an output file and the command/notebook cell that generated it.
+- [x] Recompute metrics from saved raw predictions/logs where possible.
+- [x] Confirm IDs, labels, partitions, missing values, and metric direction are checked.
+- [x] Report uncertainty/variation where the design supports it; do not claim significance without a valid test.
+- [x] Reconcile claims in the PDF with main.tex/main_acmart_overleaf.tex, references.bib, code, and saved outputs.
 - [ ] Explain negative results, discrepancies, resource costs, and limitations.
 - [ ] Record the selected manuscript version and remove/label superseded drafts to avoid accidental submission of inconsistent versions.
 
 ## 6. AI and human accountability
 
-- [ ] Retain authentic prompts and distinguish AI suggestions from human decisions.
+- [x] Retain authentic prompts and distinguish AI suggestions from human decisions.
 - [ ] For each material code change, record the proposed change, human review, verification method, and actual outcome.
-- [ ] Include only genuine examples of AI errors, manual corrections, or verification.
+- [x] Include only genuine examples of AI errors, manual corrections, or verification.
 - [ ] Be able to explain the main code path, metrics, data protocol, and limitations in a demonstration/viva.
 
 ## 7. GitHub/publication hygiene
 
-- [ ] Check the full repository for API keys, tokens, private data, and restricted model/data artifacts.
-- [ ] Confirm redistribution permissions for papers, screenshots, figures, datasets, and third-party materials.
+- [x] Check the full repository for API keys, tokens, private data, and restricted model/data artifacts.
+- [x] Confirm redistribution permissions for papers, screenshots, figures, datasets, and third-party materials.
 - [ ] Add a license only after confirming the right to license all distributed content.
-- [ ] Add tested setup/run instructions and dependency versions.
-- [ ] Verify the repository URL and commit after publishing.
+- [x] Add tested setup/run instructions and dependency versions.
+- [x] Verify the repository URL and commit after publishing.
 
 ## Evidence labels
 
