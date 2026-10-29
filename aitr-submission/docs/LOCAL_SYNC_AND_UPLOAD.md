@@ -26,7 +26,7 @@ mkdir -p datasets/source-protocols datasets/source-prompt-packs
 mkdir -p implementations/source-notebooks implementations/source-results
 mkdir -p implementations/source-phase-packages
 mkdir -p paper/archive-candidates paper/latex-source paper/archive-figures paper/revision-evidence
-mkdir -p references/source-exports references/literature-evidence
+mkdir -p references/source-exports references/source-bibliography references/literature-evidence
 mkdir -p tools/source-workbooks
 mkdir -p aitr-submission/phase-vi
 
@@ -68,7 +68,7 @@ cp "$SRC/Elicit_Report_Error_Propagation.pdf" "$SRC/Elicit - Error Propagation i
 
 # Bibliographic exports
 cp "$SRC/Part_B_Collection_Export.ris" "$SRC/ResearchRabbit_Collection_Export.ris" references/source-exports/
-cp "$SRC/references.bib" references/references.bib
+cp "$SRC/references.bib" references/source-bibliography/references.bib
 ```
 
 ## 3. Validate the source files before committing
@@ -95,7 +95,7 @@ The original archive's validation JSON reports 24,000 rows in its multi-seed CSV
 git add citation/source-workbooks citation/source-maps datasets/source-protocols datasets/source-prompt-packs \
   implementations/source-notebooks implementations/source-results implementations/source-phase-packages \
   paper/archive-candidates paper/latex-source paper/archive-figures paper/revision-evidence \
-  references/source-exports references/literature-evidence references/references.bib tools/source-workbooks \
+  references/source-exports references/source-bibliography references/literature-evidence references/references.bib tools/source-workbooks \
   aitr-submission/phase-vi
 
 git commit -m "Add FINAL ATR source artifacts to research categories"
