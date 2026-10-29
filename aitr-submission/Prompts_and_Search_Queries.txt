@@ -1,0 +1,11 @@
+LAB 4 - PROMPTS AND SEARCH QUERIES (Part I)
+Student: Sutariya Gaurav Karsanbhai | Roll no.: MCL2026003
+
+PR01 | ResearchRabbit | No free-text prompt. Seed collection of 2 seed articles; view: Similar articles
+PL01 | Litmaps | No free-text prompt. Seed article Xie (2026); citation timeline map
+PS01 | Semantic Scholar | Why Do Multi-Agent LLM Systems Fail
+PS02 | Semantic Scholar | automated failure attribution LLM multi-agent systems
+PS03 | Semantic Scholar | propagation-aware uncertainty quantification multi-agent LLM
+PS04 | Semantic Scholar | fault injection agentic workflows
+PE01 | Elicit | How do errors originate and propagate across multi-stage LLM-agent workflows, and which methods measure, attribute, or mitigate those errors?
+PE02 | Elicit | Extraction columns: research goal; workflow/system studied; method; dataset/benchmark; measures; main result; limitation; relevance to the review
