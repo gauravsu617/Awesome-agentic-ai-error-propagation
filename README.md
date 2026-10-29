@@ -40,7 +40,7 @@ Reliable research automation requires more than fluent final text. Important app
 
 This research paper examines how errors can enter different stages of an agentic research workflow and affect downstream outputs. It discusses error sources, propagation mechanisms, current reliability approaches, research challenges, and future directions.
 
-**Selected replacement manuscript:** [paper/README.md](paper/README.md) documents the newly supplied 13-page PDF and its SHA-256. The binary at [paper/RESEARCH_paper.pdf](paper/RESEARCH_paper.pdf) still needs the local replacement step because this connector cannot upload raw PDF bytes.
+**Manuscript status:** [paper/README.md](paper/README.md) records the intended 13-page replacement PDF and its SHA-256. The tracked [paper/RESEARCH_paper.pdf](paper/RESEARCH_paper.pdf) has not been replaced by the text-only GitHub edits; do not assume it is the latest manuscript.
 
 ### Main Workflow
 
@@ -55,7 +55,7 @@ The citation-integrity audit checks whether references and claims in the AI-assi
 
 ## Curated Research Papers
 
-The overview below retains 20 curated papers with short relevance descriptions. The current project bibliography is the separate [23-reference catalog](references/references.md), aligned with [references.bib](references/references.bib). Use the [Citation Verification Audit](citation/Citation_Verification_Audit.md) to check source-support notes and pending reference verification before submission.
+The overview below retains 20 papers selected for background relevance to agentic workflows, retrieval, tool use, and evaluation. Several are indirect background resources rather than studies of error propagation itself; benchmark or framework inclusion must not be presented as direct evidence that a method prevents propagation. The separate [23-reference bibliography](references/references.md) is aligned with [references.bib](references/references.bib). Consult the [Citation Verification Audit](citation/Citation_Verification_Audit.md) for unsupported, partial, and unverified citation claims before submission.
 
 ### Agent Reasoning and Reflection
 
@@ -331,7 +331,7 @@ A final report may contain genuine sources and fluent academic writing while sti
 
 ## AITR Implementation-Based Research Submission
 
-The repository now includes a selected AITR source-and-audit subset for **Error Propagation in Multi-Step Agentic AI Workflows for Research Automation**. The full supplied FINAL ATR archive is not yet mirrored file-for-file; see the archive manifest for the distinction between files present in GitHub and files still only in the original package.
+The repository includes a selected AITR source-and-audit subset for **Error Propagation in Multi-Step Agentic AI Workflows for Research Automation**. It is not a complete mirror of the supplied FINAL ATR archive, and the planned manuscript-PDF replacement is not complete. See the archive manifest for the distinction between files present in GitHub and files still only in the original package.
 
 - [Open the AITR submission package](aitr-submission/README.md)
 - [FINAL ATR archive manifest and mirror status](aitr-submission/ARCHIVE_MANIFEST.md)
