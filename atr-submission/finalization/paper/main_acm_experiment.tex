@@ -1,0 +1,96 @@
+\documentclass[sigconf,nonacm]{acmart}
+\settopmatter{printacmref=false}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\title{Error Propagation in Multi-Step Agentic AI Workflows for Research Automation: A Controlled Simulation Study}
+\author{Sutariya Gaurav Karsanbhai}
+\affiliation{\institution{Indian Institute of Information Technology Allahabad}\city{Prayagraj}\state{Uttar Pradesh}\country{India}}
+\renewcommand{\shortauthors}{S. G. Karsanbhai}
+\begin{abstract}
+Multi-step agentic workflows divide research automation into stages such as planning, information retrieval, evidence extraction, and verification. Errors introduced at one stage may affect later stages, but workflow-level binary success measures can hide the accumulation of additional errors after the first failure. This paper presents a controlled simulation of conditional downstream error propagation in a four-stage research-workflow abstraction. Two conditions are compared: independent stage errors and conditional propagation, where an error at the immediately preceding stage increases the next stage's error probability by 0.30, capped at 1.0. Four base error probabilities (0.0, 0.1, 0.2, and 0.3) are evaluated using 30 seeds and 100 trials per seed, rate, and condition, producing 24,000 records. At base rates 0.1, 0.2, and 0.3, conditional propagation increased mean stage errors by 0.107, 0.207, and 0.331 per workflow. Paired 95\% t intervals over 3,000 matched seed--trial pairs were [0.0933, 0.1207], [0.1886, 0.2247], and [0.3092, 0.3528]. The binary any-error rate was equal across conditions because the outcome becomes positive at the first stage error. The results apply only to the specified synthetic process; they do not measure live LLM agents or real research correctness.
+\end{abstract}
+\keywords{Agentic AI, error propagation, research automation, simulation, workflow reliability, reproducibility}
+\begin{document}
+\maketitle
+\section{Introduction}
+Large language models are increasingly embedded in multi-step workflows that plan subtasks, retrieve information, call tools, maintain intermediate state, and produce final outputs. ReAct interleaves reasoning and actions, while chain-of-thought, self-consistency, and tree-based reasoning organize intermediate problem-solving steps \cite{yao2023react,wei2022cot,wang2023selfconsistency,yao2023tot}. Tool-augmented systems and retrieval-augmented generation extend the information and actions available to a model \cite{schick2023toolformer,qin2024toolllm,lewis2020rag,asai2024selfrag}. These capabilities make agentic workflows useful for research support, but they also create dependencies between intermediate outputs.
+
+A research workflow may include query planning, scholarly retrieval, source screening, evidence extraction, synthesis, citation, and verification. An early-stage error can become an input to later stages. Reflection and multi-agent coordination offer possible ways to inspect intermediate work, but self-critique or role separation does not automatically provide independent verification \cite{shinn2023reflexion,wu2024autogen,hong2024metagpt}.
+
+This study narrows the broader problem to a tractable simulation. It compares independent stage errors with a conditional propagation rule in a four-stage workflow. The goal is not to claim that the simulator reproduces a deployed agent. Instead, it isolates one mechanism and examines how the chosen outcome metrics respond to it.
+
+\section{Research Questions}
+\textbf{RQ1:} Under a fixed base per-stage error probability, does conditional downstream propagation increase the mean number of stage errors compared with independent errors?
+
+\textbf{RQ2:} How does the difference in mean stage-error count vary across base error probabilities 0.0, 0.1, 0.2, and 0.3?
+
+\textbf{RQ3:} Does a binary any-error workflow-failure metric distinguish the two conditions under the definition used in this study?
+
+\section{Methodology}
+\subsection{Workflow and conditions}
+The workflow contains four sequential stages: planning, retrieval, evidence extraction, and verification. Let $E_i\in\{0,1\}$ indicate an error at stage $i$, and let $p\in\{0,0.1,0.2,0.3\}$ be the base error probability. In the independent condition, each stage uses probability $p$. In the propagation condition, the first stage uses $p$, and a later stage uses
+\[
+P(E_i=1\mid E_{i-1})=
+\begin{cases}
+p,&E_{i-1}=0,\\
+\min(1,p+\delta),&E_{i-1}=1,
+\end{cases}
+\]
+where $\delta=0.30$. The stage-error count is $S=\sum_{i=1}^{4}E_i$. The binary any-error indicator is $F=\mathbb{1}(S>0)$.
+
+\subsection{Experimental protocol}
+The archived multi-seed CSV contains 30 seed values (2026--2055), 100 trials per seed, four base error rates, and two conditions. This gives 24,000 records, or 3,000 records per rate-condition cell. The same seed is reset for each condition, yielding matched random streams. Paired comparisons match records by seed and trial within each base error rate.
+
+The primary metric is the mean stage-error count $S$. The secondary metric is the empirical any-error rate $F$. The experiment is a synthetic simulation; it does not execute an LLM, browse scholarly sources, or use HotpotQA as an experimental dataset.
+
+\subsection{Validation and statistical analysis}
+The raw CSV was checked for expected columns, missing values, duplicate rows, allowed error-rate values, non-negative integer stage-error counts, and consistency between $F$ and $S>0$. Group means were recalculated from raw records. For the primary comparison, the difference in stage-error count was calculated for each matched seed--trial pair. A two-sided 95\% Student t interval was computed over 3,000 paired differences at each rate.
+
+\section{Results}
+The raw data contain 24,000 records, with 3,000 records in each rate-condition cell. The multi-seed CSV has no missing values or duplicate rows, and the failure flag agrees with $F=\mathbb{1}(S>0)$.
+
+\begin{table}[t]
+\caption{Recalculated experimental outcomes from the raw CSV.}
+\centering\small
+\begin{tabular}{rrrrr}
+\toprule
+Base $p$ & Independent & Propagation & Difference & Any-error rate\\
+\midrule
+0.0 & 0.0000 & 0.0000 & 0.0000 & 0.0000\\
+0.1 & 0.3847 & 0.4917 & 0.1070 & 0.3360\\
+0.2 & 0.7887 & 0.9953 & 0.2067 & 0.5787\\
+0.3 & 1.1790 & 1.5100 & 0.3310 & 0.7447\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The estimated paired increases were 0.1070 (95\% CI [0.0933, 0.1207]), 0.2067 ([0.1886, 0.2247]), and 0.3310 ([0.3092, 0.3528]) at base rates 0.1, 0.2, and 0.3, respectively. At rate 0, both conditions produced zero errors.
+
+The any-error rate was equal between conditions at each base rate: 0.0000, 0.3360, 0.5787, and 0.7447. This follows from the metric definition: the workflow is already classified as failed once any error occurs, so later errors cannot change the binary indicator.
+
+\section{Discussion}
+The results support the hypothesis that the specified conditional rule increases stage-error accumulation. The difference between conditions becomes larger across the tested non-zero base rates. This behavior is consistent with the simulator's design: once a stage error occurs, the immediately following stage has a higher probability of error.
+
+The equal any-error rates do not contradict this result. The binary indicator measures whether at least one error occurred, not how many errors accumulated after the first. Future evaluation should separately measure first-error incidence, stage-error count, recovery, terminal-output correctness, and claim-level evidence support.
+
+\section{Threats to Validity and Limitations}
+\textbf{Construct validity.} A binary simulated stage error is a simplified abstraction. Real errors differ in type, severity, detectability, and reversibility.
+
+\textbf{Internal validity.} The propagation increment $\delta=0.30$ is a design assumption, not an empirically calibrated value. The model uses four stages and one-step dependence on the immediately preceding stage. It does not include recovery or persistent error state.
+
+\textbf{Measurement validity.} The primary metric counts stage errors. The secondary metric is an any-error indicator, not final answer correctness. No research claims, citations, or synthesized outputs are evaluated.
+
+\textbf{External validity.} No live LLM, multi-agent framework, scholarly search API, or external benchmark was run. The findings apply only to the specified synthetic process.
+
+\section{Reproducibility and Research Integrity}
+The project archive contains Phase III notebooks, the raw multi-seed CSV, summary CSVs, validation report, environment logs, and evaluation script. The configuration is four stages, base rates 0.0--0.3, $\delta=0.30$, 30 seeds, and 100 trials per seed/rate/condition. A clean-clone reproduction and compilation of this ACM source remain separate submission checks.
+
+The student reports using ChatGPT, Elicit, Semantic Scholar, ResearchRabbit, and Litmaps, and personally checking the paper, executing the notebook, and checking and verifying the final results. The final disclosure should follow institutional policy.
+
+\section{Conclusion}
+This controlled simulation shows that conditional downstream propagation increases the mean number of stage errors in the specified four-stage process. The paired increase grows from 0.1070 at base rate 0.1 to 0.3310 at base rate 0.3. The binary any-error rate remains equal because the indicator becomes positive at the first error. The study is a mechanism-isolation experiment, not a claim about real-world LLM-agent performance.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}
