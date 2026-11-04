@@ -406,3 +406,8 @@ awesome-agentic-ai-error-propagation/
 - [ ] Make at least 5 meaningful Git commits
 - [ ] Keep repository public
 
+
+
+## Final AITR Assignment Materials
+
+The additional Prompt 9 documentation, Phase V internal technical review, revision log, reproducibility guide, simulation support module/tests, and ACM `sigconf,nonacm` course-paper source are available in [`atr-submission/finalization/`](atr-submission/finalization/README.md). The student-specific Phase VI activity report and final editable/PDF submission bundle are retained locally rather than published. ACM compilation, primary-source citation checks, and a clean-clone reproduction remain required release checks.
