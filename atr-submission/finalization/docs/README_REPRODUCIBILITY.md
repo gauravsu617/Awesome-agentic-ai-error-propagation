@@ -29,3 +29,11 @@ The local course-paper source uses \documentclass[sigconf,nonacm]{acmart}. Compi
 - Fixed propagation increment.
 - No terminal-output correctness or claim-level citation score.
 - Clean-clone reproduction and ACM compilation remain student-side release checks.
+
+## Prompt 9 sanity tests
+From the repository root:
+```bash
+cd atr-submission/finalization
+python -m unittest discover -s tests -v
+```
+The six tests cover output bounds, boundary probabilities, deterministic repeatability, failure-flag consistency, and invalid inputs. Re-run and preserve your own console output before claiming a test pass in your environment.
