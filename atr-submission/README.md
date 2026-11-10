@@ -1,48 +1,42 @@
-# AITR Research Submission: Error Propagation in Multi-Step Agentic AI Workflows
+# ATR — Error Propagation in Agentic Research Workflows
 
-This directory contains selected text-based source and reproducibility materials from the supplied FINAL ATR package for the AI Tools for Research assignment.
+This repository contains the literature review and a controlled synthetic simulation study for the AI Tools for Research (ATR) assignment.
 
-## Research scope
+## Current experimental scope
 
-The project topic visible in the supplied artifacts is error propagation in multi-step agentic AI workflows used for research automation. The described workflow includes planning, literature search, source selection, evidence extraction, analysis, synthesis, verification, and report generation.
+Paper 2 models a four-stage research workflow: planning, retrieval, evidence extraction, and verification. It compares independent stage errors with a conditional one-step propagation rule. The primary archived dataset contains 24,000 trial records; the sensitivity analysis varies the assumed propagation increment over five settings.
 
-## Files currently mirrored here
+**Important limitation:** this is a synthetic simulation. It is not a live LLM-agent experiment, a multi-agent framework evaluation, or a HotpotQA benchmark. The propagation increment is a fixed modelling assumption, not an empirically calibrated parameter. Conclusions apply only to the specified simulator.
 
-- `evaluate_phaseiv.py`: validates a results CSV and writes grouped summaries, comparison tables (when both `independent` and `propagation` models are present), and plots.
-- `notebooks/`: two Phase III notebooks, including the completed Prompts 10–11 notebook.
-- `figures/`: four project figures.
-- `results/predictions/`: original baseline, propagation, multi-seed, summary, and comparison CSVs.
-- `results/figures/` and `results/logs/`: simulation plots and environment/validation records.
-- `docs/EXPERIMENT_DATA_AUDIT.md`: data-integrity checks and recalculated summary statistics.
-- `ATR_PHASE_IV_completed_Prompts_12_14.ipynb`: Phase IV protocol, CSV-validation, summary, and plotting notebook; it requires an actual results CSV to run.
-- `references.bib`: bibliography source.
-- `Prompts_and_Search_Queries.txt`: saved literature-search query notes.
-- `docs/REPRODUCIBILITY_AUDIT.md`: evidence and reproducibility checklist.
-- `docs/ZIP_ARCHIVE_INVENTORY.md`: source ZIP inventory and mapping guidance.
-- `docs/PHASE_III_RESEARCH_AND_RESULTS.md`: Phase III artifact inventory and verification steps.
-- `docs/PHASE_IV_EVALUATION_REPORT.md` and `docs/PHASE_IV_REPORT.md`: Phase IV metrics, validation, and provisional-result caveats.
-- `docs/PHASE_V_MANUSCRIPT_REVIEW.md`, `docs/PHASE_V_PEER_REVIEW.md`, `docs/PHASE_V_REVISION_LOG.md`, `docs/PHASE_V_SUBMISSION_CHECKLIST.md`: Phase V review and evidence gates.
-- `docs/PHASE_VI_AI_USE_AND_RESEARCH_INTEGRITY.md` and `docs/PHASE_VI_ACTIVITY_LOG_GUIDE.md`: AI-use and authentic activity-log guidance.
+## Repository layout
 
-The original archive also contains additional LaTeX manuscript sources, PDFs, citation-verification and tool-rating workbooks, RIS exports, citation-map images, and nested phase ZIP files. The two Phase III notebooks, four main figures, raw baseline/propagation/multi-seed CSVs, experiment figures, and environment/validation logs are now mirrored here. The remaining files are listed in the archive manifest. See the [category-by-category archive manifest](ARCHIVE_MANIFEST.md) and [ZIP inventory](docs/ZIP_ARCHIVE_INVENTORY.md). The pre-existing paper artifact in this repository is available at [paper/RESEARCH_paper.pdf](../paper/RESEARCH_paper.pdf).
+- `finalization/paper/` — Paper 2 LaTeX source and bibliography.
+- `finalization/src/` — simulator support module.
+- `finalization/tests/` — simulator unit tests.
+- `results/predictions/` — archived primary CSV results.
+- `notebooks/` — original Phase III notebooks.
+- `docs/` — research decisions, validation, reproducibility, review, AI-use and viva materials.
+- `paper/` — earlier literature-review manuscript sources; do not confuse these with the Paper 2 finalization source.
 
-## Running the Phase IV evaluator
+## Reproduction
 
-The script requires pandas, numpy, and matplotlib. Confirm compatible package versions in your actual environment before claiming reproducibility.
+From the repository root:
 
 ```bash
 python -m pip install pandas numpy matplotlib
-python evaluate_phaseiv.py --input path/to/multi_seed_results.csv --outdir results/phase_iv
+python atr-submission/simulate_phaseiii.py --outdir atr-submission/results/phase_iii_reproduced
+python atr-submission/evaluate_phaseiv.py --input atr-submission/results/predictions/multi_seed_results.csv --outdir atr-submission/results/phase_iv_ci
 ```
 
-The input CSV must include `error_rate`, `model`, `stage_errors`, and `workflow_failed`. If the evaluator finds invalid or inconsistent rows, it exits with an error. The script is an analysis utility. The committed CSV was reproduced exactly by `simulate_phaseiii.py` in the GitHub Actions clean Ubuntu/Python 3.12 environment (24,000 rows, exact frame comparison), and `evaluate_phaseiv.py` completed successfully in the same workflow. This verifies consistency of the committed generator, data, and evaluator; it does not independently validate the scientific assumptions or generalize the simulation to real agents. See the [automated validation workflow](../.github/workflows/research-validation.yml) and its run history.
+Run simulator tests:
 
-## Research integrity and reproducibility
+```bash
+cd atr-submission/finalization
+python -m unittest discover -s tests -v
+```
 
-- Do not invent experimental results, logs, dataset access, citations, or AI-use experiences.
-- Preserve raw predictions/logs and the exact configuration used for each reported result.
-- Mark missing evidence as unknown or test required.
-- Trace every manuscript result and figure to a real output file and code cell/command.
-- Verify third-party redistribution rights before committing PDFs, datasets, screenshots, or nested archives.
+Compile Paper 2 from `atr-submission/finalization/paper/` with the ACM `acmart` class and BibTeX.
 
-See [the reproducibility audit](docs/REPRODUCIBILITY_AUDIT.md), [citation integrity checklist](docs/CITATION_INTEGRITY_AUDIT.md), and [instructions for syncing the remaining archive artifacts](docs/LOCAL_SYNC_AND_UPLOAD.md).
+## Reproducibility status
+
+The GitHub Actions workflow runs the simulator tests, reproduces Phase III data, checks the regenerated 24,000-row CSV against the committed source CSV, evaluates Phase IV, and compiles the Paper 2 finalization manuscript. A passing workflow verifies those automated steps; it does not establish real-world agent performance or replace a student clean-clone check.
