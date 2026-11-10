@@ -1,4 +1,4 @@
-name: Research reproduction and paper build
+name: Research reproduction and final Paper 2 build
 
 on:
   push:
@@ -13,7 +13,7 @@ permissions:
 jobs:
   reproduce-and-build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -26,6 +26,10 @@ jobs:
       - name: Install analysis dependencies
         run: python -m pip install --upgrade pip pandas numpy matplotlib
 
+      - name: Run simulator unit tests
+        working-directory: atr-submission/finalization
+        run: python -m unittest discover -s tests -v
+
       - name: Reproduce Phase III simulation
         run: python atr-submission/simulate_phaseiii.py --outdir atr-submission/results/phase_iii_reproduced
 
@@ -33,7 +37,6 @@ jobs:
         run: |
           python - <<'PY'
           import pandas as pd
-          from pathlib import Path
           original = pd.read_csv("atr-submission/results/predictions/multi_seed_results.csv")
           reproduced = pd.read_csv("atr-submission/results/phase_iii_reproduced/multi_seed_results.csv")
           sort_cols = ["seed", "error_rate", "model", "trial"]
@@ -55,20 +58,20 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-publishers texlive-bibtex-extra
 
-      - name: Compile manuscript and bibliography
-        working-directory: atr-submission/paper
+      - name: Compile final Paper 2 manuscript and bibliography
+        working-directory: atr-submission/finalization/paper
         run: |
-          pdflatex -interaction=nonstopmode -halt-on-error main.tex
-          bibtex main
-          pdflatex -interaction=nonstopmode -halt-on-error main.tex
-          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          pdflatex -interaction=nonstopmode -halt-on-error main_acm_experiment.tex
+          bibtex main_acm_experiment
+          pdflatex -interaction=nonstopmode -halt-on-error main_acm_experiment.tex
+          pdflatex -interaction=nonstopmode -halt-on-error main_acm_experiment.tex
 
-      - name: Upload validation outputs and manuscript PDF
+      - name: Upload validation outputs and final manuscript PDF
         uses: actions/upload-artifact@v4
         with:
-          name: research-validation-outputs
+          name: atr-final-paper2-validation
           path: |
             atr-submission/results/phase_iii_reproduced/
             atr-submission/results/phase_iv_ci/
-            atr-submission/paper/main.pdf
+            atr-submission/finalization/paper/main_acm_experiment.pdf
           if-no-files-found: error
