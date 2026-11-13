@@ -1,4 +1,4 @@
-# Final AITR Reproducibility Guide
+# Final ATR Reproducibility Guide
 
 ## Research scope
 The executable study is a four-stage synthetic simulation comparing independent stage errors with conditional downstream propagation. It is not a live LLM-agent experiment and does not evaluate HotpotQA.
